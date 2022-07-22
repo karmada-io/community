@@ -171,7 +171,7 @@ before being able to contribute effectively.
 
 [contributor guide]: /contributors/guide/README.md
 [Karmada mailling list]: https://groups.google.com/forum/#!forum/karmada
-[membership request]: https://github.com/karmada-io/community/issues/new/choose
+[membership request]: https://github.com/karmada-io/community/issues/new?assignees=&labels=area%2Fgithub-membership&template=membership.yml&title=REQUEST%3A+New+membership+for+%3Cyour-GH-handle%3E
 [New contributors]: /CONTRIBUTING.md
 [OWNERS]: /contributors/guide/owners.md
 [two-factor authentication]: https://help.github.com/articles/about-two-factor-authentication
