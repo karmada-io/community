@@ -51,11 +51,11 @@ Karmada currently has [330+](https://karmada.devstats.cncf.io/d/18/overall-proje
 More details about our developers are available in [Robust Developer Ecosystem](#robust-developer-ecosystem).
 
 * We hold bi-weekly community meetings regularly (38 times as of September 2022), with about 25 attendees each time. Meeting minutes available [here](https://docs.google.com/document/d/1y6YLVC-v7cmVAdbjedoyR5WL0-q45DBRXTvz5_I7bkA/edit).
-* [GitHub stars](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **1600+ to 2600+**
+* [GitHub stars](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **1,600+ to 2,600+**
 * [GitHub forks](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **200+ to 500+**
-* [Number of contributions](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&var-period=m&var-metric=contributions&var-repogroup_name=All&var-country_name=All&var-company_name=All&var-company=all&from=now-1y&to=now&editPanel=5) increased to **1500+ per month**
+* [Number of contributions](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&var-period=m&var-metric=contributions&var-repogroup_name=All&var-country_name=All&var-company_name=All&var-company=all&from=now-1y&to=now&editPanel=5) increased to **1,500+ per month**
 * [Number of new PRs](https://karmada.devstats.cncf.io/d/15/new-prs-in-repository-groups?orgId=1&editPanel=1) increased to **30+ per week**
-* Number of commits increased from **300+ to 1500+**
+* Number of commits increased from **300+ to 1,500+**
 * Number of PR reviewers increased to **100+**
 
 Specific devStats can be found [here](https://karmada.devstats.cncf.io/d/8/dashboards?orgId=1&refresh=15m).
@@ -217,7 +217,7 @@ We are glad to see more and more users are adopting Karmada and running it in pr
 
 We summarize our work in the last year as follows:
 
-* **More powerful cross-cluster scheduling capabilities**. In the last year, we have done a lot of work on cross-cluster scheduling of applications. Facing a variety of user scenarios, we introduced richer scheduling strategies and introduced a new component named `karmada-scheduler-estimator` to improve scheduling accuracy.
+* **More powerful cross-cluster scheduling capabilities**. In the last year, we have done a lot of work on cross-cluster scheduling of applications. Facing a variety of user scenarios, we introduced richer scheduling strategies and a new component named `karmada-scheduler-estimator` to improve scheduling accuracy.
 What's more, we introduced `karmada-descheduler` to reschedule in case of cluster resource imbalance. Based on this, users can distribute their applications more easily among clusters across regions and vendors.
 * **Easier to manage the cluster and the resources on the cluster**. In the past year, we introduced a global uniform resource view across clusters.
   - We enhanced the framework of the resource interpreter to enable users to customize the resource status collected to the control plane.
