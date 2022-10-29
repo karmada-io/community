@@ -48,9 +48,9 @@ The above efforts take the community to a new height since the project entered t
 Numbers can tell the story.
 
 Karmada currently has [330+](https://karmada.devstats.cncf.io/d/18/overall-project-statistics-table?orgId=1&viewPanel=1) contributors from [50+](https://karmada.devstats.cncf.io/d/5/companies-table?orgId=1) organizations and [14](https://karmada.devstats.cncf.io/d/18/overall-project-statistics-table?orgId=1&viewPanel=1) countries and regions.
-More details about our developers are available in [Robust Developer Ecosystem](#robust-developer-ecosystem).
+More details about our developers are available in [#Robust Developer Ecosystem](#robust-developer-ecosystem).
 
-* We hold bi-weekly community meetings regularly (38 times as of September 2022), with about 25 attendees each time. Meeting minutes available [here](https://docs.google.com/document/d/1y6YLVC-v7cmVAdbjedoyR5WL0-q45DBRXTvz5_I7bkA/edit).
+* We hold bi-weekly community meetings regularly (38 times as of September 2022), with about 25 attendees each time. [Meeting minutes](https://docs.google.com/document/d/1y6YLVC-v7cmVAdbjedoyR5WL0-q45DBRXTvz5_I7bkA/edit).
 * [GitHub stars](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **1,600+ to 2,600+**
 * [GitHub forks](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **200+ to 500+**
 * [Number of contributions](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&var-period=m&var-metric=contributions&var-repogroup_name=All&var-country_name=All&var-company_name=All&var-company=all&from=now-1y&to=now&editPanel=5) increased to **1,500+ per month**
@@ -58,7 +58,7 @@ More details about our developers are available in [Robust Developer Ecosystem](
 * Number of commits increased from **300+ to 1,500+**
 * Number of PR reviewers increased to **100+**
 
-Specific devStats can be found [here](https://karmada.devstats.cncf.io/d/8/dashboards?orgId=1&refresh=15m).
+Specific devStats can be found at: https://karmada.devstats.cncf.io/d/8/dashboards?orgId=1&refresh=15m.
 
 ## Robust Developer Ecosystem
 
@@ -67,7 +67,7 @@ We have established [the community membership](https://github.com/karmada-io/com
 We have established a mature mentor mechanism in the community. Some active and qualified contributors, mentored attentively, have been promoted to members or maintainers.
 Also, we are actively involved in various open source events, such as [LFX mentorship](https://github.com/karmada-io/karmada/issues/2371), helping college students better grow in the open source community.
 
-In the past year, our project expanded to 330+ contributors from 50 different organizations, such as members from cloud vendors or academic institutions and individual developers, showing the diversity of the community.
+In the past year, our project expanded to 330+ contributors from 50+ different organizations, including end users,cloud vendors, academic institutions and individual developers, showing the good diversity of the community.
 
 ![Contributors](./images/contributors.png)
 
@@ -132,31 +132,32 @@ Karmada now has 11 adopters that using Karmada in `production` environments as o
 * **VIPKID** is an online English teaching platform which delivers 150 million training sessions across countries and regions. To provide better services, VIPKID deploys applications by region closer to teachers and trainees.
 Therefore, VIPKID purchased dozens of clusters from multiple cloud vendors around the world to build its global infrastructure.
 How to manage multi-region and multi-vendor clusters has become a new challenge for VIPKID.
-To solve the this challenge, VIPKID finally chooses Karmada. Ci Yiheng, backend R&D expert at VIPKID, said:
+To solve the this challenge, VIPKID finally chooses Karmada. __Yiheng Ci, Senior Backend R&D Expert at VIPKID__, said:
 
   > "We surveyed and evaluated many solutions in the communities and decided on Karmada. **After Karmada is introduced, the multi-cluster aggregation layer is truly unified.**
   > We can manage resources by application on the Karmada control plane. We only need to interact with Karmada, not the clusters, which simplifies containerized application management and enables our PaaS platform to fully focus on service requirements. With Karmada integrated into GitOps, system components can be easily released and upgraded in each cluster, exponentially more efficient than before."
   >
 
-  The use case details can be found [here](https://karmada.io/docs/next/casestudies/vipkid).
+  Refer to [VIPKID case study](https://karmada.io/docs/next/casestudies/vipkid) for more details.
 * **ICBC** services run with specific requirements and on a large-scale cloud native infrastructure. There are four typical requirements, namely, high availability (HA) deployment, cross-cluster auto scaling, cross-cluster scheduling, and a specific dependency on Kubernetes versions.
 ICBC is running over **100** Kubernetes clusters and more than **280,000** containers. They are managed by the container cloud platform in a unified manner. However, ICBC also faces the following four problems: 1) Limited availability. A Kubernetes cluster is also a fault domain, requiring automatic recovery across fault domains. 2) Limited resources. Application scheduling and auto scaling are available only to single clusters. 3) Non-transparent clusters. Upper-layer applications
 are not aware of cluster differences. 4) Duplicate configuration. Although services are configured on the cloud management platform in a unified manner, their configurations need to be delivered to each cluster separately.
-To solve these problems, ICBC finally chooses Karmada. Shen Yifan at ICBC said:
+To solve these problems, ICBC finally chooses Karmada. __Yifan Shen, PaaS Platform Architect at ICBC__ said:
 
   > "For cross-cluster deployment models and scheduling, Karmada provides independent propagation policies, defined using a policy API, that can be reused across applications. For example, ICBC has its independent platform team and service team. This model can well adapt to their organizational structures."
   >
 
   The use case details can be found [here](https://karmada.io/zh/blog/2022/03/22/multi-cluster-management-with-an-ocean-of-nodes/).
+
 * **Vivo** is a tech company that designs and develops smartphones, smartphone accessories, software and online services. To better manage their large-scale cloud native infrastructure, Vivo requires the following capabilities: 1) Unified management of multiple Kubernetes clusters and resource management by application; 2) Cross-cluster auto scaling and scheduling for
 more efficient use of cross-cluster resources; 3) Dynamic migration of applications for quick failover; 4) Better DR
-To obtain the above capabilities, Vivo chooses Karmada. According to Zhang Rong from Vivo:
+To obtain the above capabilities, Vivo chooses Karmada. According to __Rong Zhang from Vivo__:
 
   > "As we are migrating services to Kubernetes, we have more and more clusters. Both their scale and O&M difficulty increase sharply. To support multi-cluster deployments, we invested much in self development, but the returns were not satisfying, so we chose Karmada." 
   >
 
 * **Trip.com** is a Chinese multinational online travel company that provides services including accommodation reservation, transportation ticketing, packaged tours and corporate travel management. Before using Karmada, Trip.com used KubeFed to build their multi-cloud container platform. However, KubeFed uses non-native Kubernetes APIs, which makes it difficult to migrate existing clusters to their multi-cloud platform. The KubeFed community is also becoming inactive.
-So Trip.com seeks smooth migration from KubeFed, as well as cross-cluster auto scaling and scheduling for their multi-cloud platform. Yue HongHui from Trip.com said:
+So Trip.com seeks smooth migration from KubeFed, as well as cross-cluster auto scaling and scheduling for their multi-cloud platform. __HongHui Yue, Lead of Infrastructure at Trip.com__ said:
 
   > "We have used KubeFed for a long time to manage our clusters. However, we encountered the problems of high reconstruction costs and no auto scaling across clusters. We are glad that Karmada helps us solve these problems."
   > 
@@ -260,7 +261,7 @@ The planed new features are listed in [roadmap](https://github.com/karmada-io/ka
 Similar to many other Sandbox projects, we wish to get the following help from CNCF:
 
 - More channels to advocate the project.
-- More chances to collaborate with other projects, both CNCF or non-CNCF ones.
+- More chances to collaborate with other projects, both CNCF and ecosystem ones.
 - Technical writing support for project documents.
 
 ## Incubation
