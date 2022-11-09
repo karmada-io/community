@@ -42,7 +42,7 @@ We also marked our presence in upstream communities.
 - In the Kubernetes community, we led the design of the [work API](https://github.com/kubernetes-sigs/work-api) for multi-cluster deployments. Our contributions make us the [maintainers of this project](https://github.com/kubernetes-sigs/work-api/blob/master/OWNERS).
   Meanwhile, we are actively involved in the [mcs-api](https://github.com/kubernetes-sigs/mcs-api) and [about-api](https://github.com/kubernetes-sigs/about-api) projects hosted by Kubernetes multi-cluster SIG.
   We are also one of the earliest projects to adopt the above APIs of the upstream communities. Our users can easily use them in Karmada. For example, we provide [multi-cluster service discovery](https://karmada.io/docs/next/userguide/service/multi-cluster-service) based on multi-cluster service APIs.
-- Besides Kubernetes, we are open to intergration of more CNCF projects and already have some amazing cases (details available [here](#rich-integration)).
+- Besides Kubernetes, we are open to integration of more CNCF projects and already have some amazing cases (details available [here](#rich-integration)).
 
 The above efforts take the community to a new height since the project entered the CNCF sandbox.
 Numbers can tell the story.
@@ -244,7 +244,7 @@ The Karmada project continues to grow and has its sight on short-term and long-t
 Multicloud means larger resource pools, which brings greater performance pressure to the multi-cloud management platform.
 In large-scale scenarios, we will continue to reduce the access latency, resources consumed, and stability impact on the system under high concurrency.
 * **Multi-cluster observability**. Multi-cluster observability is an important part in a multi-cluster orchestration.
-  - We will continue to explore integrated solutions for multi-cloud monitoring and logging
+  - We will continue to explore integrated solutions for multi-cloud monitoring and logging.
   - We will continue to optimize multi-cluster events so that users can better maintain the multi-cloud management platform.
 * **Multi-cluster application distribution**. There are still many challenges in application distribution across multiple clusters.
   - For plug-ins coupled with the cluster, we will dive into simplifying the plug-in installation and lifecycle management.
