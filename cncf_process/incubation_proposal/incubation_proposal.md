@@ -108,7 +108,7 @@ Karmada has made feature developments in at least the following technical fields
 
 ## Incubation Stage Requirements
 
-**_Document that it is being used successfully in production by at least three independent end users which, in the TOC’s judgement, are of adequate quality and scope._**
+**_Document that it is being used successfully in production by at least three independent direct adopters which, in the TOC’s judgement, are of adequate quality and scope._**
 
 11 adopters are using Karmada in their `production` environments as of Oct 25, 2022. The full adopter list can be found on our [website](https://karmada.io/docs/next/casestudies/adopters).
 
