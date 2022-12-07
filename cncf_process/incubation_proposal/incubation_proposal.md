@@ -53,12 +53,12 @@ Karmada currently has [330+](https://karmada.devstats.cncf.io/d/18/overall-proje
 More details about our developers are available in [#Robust Developer Ecosystem](#robust-developer-ecosystem).
 
 * We hold bi-weekly community meetings regularly (38 times as of September 2022), with about 25 attendees each time. [Meeting minutes](https://docs.google.com/document/d/1y6YLVC-v7cmVAdbjedoyR5WL0-q45DBRXTvz5_I7bkA/edit).
-* [GitHub stars](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **1,600+ to 2,600+**
+* [GitHub stars](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **1,600+ to 2,900+**
 * [GitHub forks](https://karmada.devstats.cncf.io/d/3/stars-and-forks-by-repository?orgId=1) increased from **200+ to 500+**
-* [Number of contributions](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&var-period=m&var-metric=contributions&var-repogroup_name=All&var-country_name=All&var-company_name=All&var-company=all&from=now-1y&to=now&editPanel=5) increased to **1,500+ per month**
+* [Number of contributions](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&var-period=m&var-metric=contributions&var-repogroup_name=All&var-country_name=All&var-company_name=All&var-company=all&from=now-1y&to=now&editPanel=5) increased to **1,700+ per month**
 * [Number of new PRs](https://karmada.devstats.cncf.io/d/15/new-prs-in-repository-groups?orgId=1&editPanel=1) increased to **30+ per week**
-* Number of commits increased from **300+ to 1,500+**
-* Number of PR reviewers increased to **100+**
+* Number of commits increased from **300+ to 1,700+**
+* Number of PR reviewers increased to **110+**
 
 Specific devStats can be found at: https://karmada.devstats.cncf.io/d/8/dashboards?orgId=1&refresh=15m.
 
@@ -130,15 +130,15 @@ There are 70 project members for Karmada, out of which there are 7 [maintainers]
 
 A short summary has been provided in [#Continous Community Momentum](#continous-community-momentum). Detailed statistics can be found in the following devstats links:
 
-* [Commit Activity](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&from=now-1y&to=now)
+* [Contribution Activity](https://karmada.devstats.cncf.io/d/74/contributions-chart?orgId=1&from=now-1y&to=now): 1700+ per month
 * [New contributors since sandbox](https://karmada.devstats.cncf.io/d/52/new-contributors-table?orgId=1&from=1631635200000&to=now)
-* [Issues open/closed since sandbox](https://karmada.devstats.cncf.io/d/12/issues-opened-closed-by-repository-group?orgId=1&from=1631635200000&to=now)
-* [PRs open/closed since sandbox](https://karmada.devstats.cncf.io/d/12/issues-opened-closed-by-repository-group?orgId=1&from=1631635200000&to=now)
-* [Contributing organizations](https://karmada.devstats.cncf.io/d/5/companies-table?orgId=1)
+* [Issues open/closed since sandbox](https://karmada.devstats.cncf.io/d/12/issues-opened-closed-by-repository-group?orgId=1&from=1631635200000&to=now): average 45 issues opened and 35 issues closed per month
+* [PRs open/closed since sandbox](https://karmada.devstats.cncf.io/d/12/issues-opened-closed-by-repository-group?orgId=1&from=1631635200000&to=now): average 127 PRs opened and 115 PRs closed per month
+* [Contributing organizations](https://karmada.devstats.cncf.io/d/5/companies-table?orgId=1): 50+ companies and organizations
 
 **_A clear versioning scheme._**
 
-Karmada uses the [semantic versioning scheme](https://semver.org/#semantic-versioning-specification-semver). We have minor release every three months, for patch releases the cadence is one month. The latest release is v1.3.1.
+Karmada uses the [semantic versioning scheme](https://semver.org/#semantic-versioning-specification-semver). We have minor release every three months, for patch releases the cadence is roughly one month, or when critical fixes are required. The latest release is v1.4.0.
 
 We have releases documented at: https://karmada.io/docs/next/releases
 
@@ -163,6 +163,8 @@ The Karmada project continues to grow and has its sight on short-term and long-t
     The aim is to minimize the permissions of the control plane and reduce blast radius to member clusters after a control plane failure.
   - Another target is on multi-cluster access control with finer-grained security isolation on the control plane.
 * **Larger scalability**. We have been working on improving user experience in large-scale scenarios with the previous releases.
+  We launched a large-scale test on Karmada to obtain baseline performance metrics for Karmada managing multiple Kubernetes clusters.
+  The test results show that Karmada can stably support 100 large-scale clusters with 500,000 nodes connected at the same time, running more than 2 million pods.
   Multicloud means larger resource pools, which brings greater performance pressure to the multi-cloud management platform.
   In large-scale scenarios, we will continue to reduce the access latency, resources consumed, and stability impact on the system under high concurrency.
 * **Multi-cluster observability**. Multi-cluster observability is an important part in a multi-cluster orchestration. We will continue to:
@@ -173,6 +175,7 @@ The Karmada project continues to grow and has its sight on short-term and long-t
   - When applications have sequential relationships between clusters, we aim to provide a multi-cluster workflow to simplify the deployment of these applications.
 * **Integration with ecosystem**.
   The integration with the CNCF ecosystem has always been a major focus of our efforts.
+  We actively cooperate with other CNCF projects and helps them better transition to multi-cluster based on Kubernetes native APIs, such as Argo CD and Flux.
   We believe that cooperation in different fields can better serve our users.
   We will continue to seek cooperation with other mature projects to form an open and prosperous ecosystem.
 
