@@ -9,7 +9,7 @@ Please keep the below list sorted in ascending order.
 | Reviewer/Approver | GitHub ID           | Affiliation             |
 |-------------------|---------------------|-------------------------|
 | Chauncey          | @chaunceyjiang      | DaoCloud                |
-| Fan Bao           | @carlory            | DaoCloud                |
+| Baofa Fan         | @carlory            | DaoCloud                |
 | Future            | @pidb               | AIML INSTITUTE          |
 | Hanbo Li          | @mrlihanbo          | Huawei                  |
 | Hongcai Ren       | @RainbowMango       | Huawei                  |
@@ -24,6 +24,7 @@ Please keep the below list sorted in ascending order.
 | Tao Ling          | @Tingtal            | Huawei                  |
 | Tiecheng Shen     | @Poor12             | Huawei                  |
 | Wang Bing         | @pigletfly          | Youzan                  |
+| Wen Chen          | @calvin0327         | DaoCloud                |
 | Xinzhao Xu        | @iawia002           | Kubesphere              |
 | Yan Li            | @huntsman-li        | Hualala                 |
 | Yasong Li         | @liys87x            | Hualala                 |
