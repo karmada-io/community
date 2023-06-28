@@ -21,6 +21,7 @@ Please keep the below list sorted in ascending order.
 | Rui Fang          | @Garrybest          | Tencent                 |
 | Rui Jiang         | @jrkeen             | BMW-CIH                 |
 | Rupesh Gelal      | @rgrupesh           | Independent             |
+| Samzong Lu        | @SAMZONG            | DaoCloud                |
 | Tao Ling          | @Tingtal            | Huawei                  |
 | Tiecheng Shen     | @Poor12             | Huawei                  |
 | Wang Bing         | @pigletfly          | Youzan                  |
