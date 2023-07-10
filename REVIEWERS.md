@@ -17,6 +17,7 @@ Please keep the below list sorted in ascending order.
 | Jinhui Ying       | @ikaven1024         | DiDi                    |
 | Jun Qian          | @qianjun1993        | Tencent                 |
 | Kevin Wang        | @kevin-wangzefeng   | Huawei                  |
+| Michael Yao       | @windsonsea         | DaoCloud                |
 | Prodan            | @prodanlabs         | Independent             |
 | Rui Fang          | @Garrybest          | Tencent                 |
 | Rui Jiang         | @jrkeen             | BMW-CIH                 |
