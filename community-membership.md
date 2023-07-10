@@ -4,11 +4,12 @@
 
 This doc outlines the various responsibilities of contributor roles in Karmada.
 
-| Role             | Responsibilities                              | Requirements                                                                     | Defined by                                          |
-|------------------|-----------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------|
-| Member           | Active contributor in the community           | Sponsored by 2 reviewers and multiple contributions to the project               | Karmada GitHub org member                           |
-| Reviewer         | Review contributions from other members       | History of review and authorship in a subproject                                 | [OWNERS] file reviewer entry                        |
-| Approver         | Contributions acceptance approval             | Highly experienced active reviewer and contributor to a subproject               | [OWNERS] file approver entry                        |
+| Role       | Responsibilities                                              | Requirements                                                       | Defined by                   |
+|------------|---------------------------------------------------------------|--------------------------------------------------------------------|------------------------------|
+| Member     | Active contributor in the community                           | Sponsored by 2 reviewers and multiple contributions to the project | Karmada GitHub org member    |
+| Reviewer   | Review contributions from other members                       | History of review and authorship in a subproject                   | [OWNERS] file reviewer entry |
+| Approver   | Contributions acceptance approval                             | Highly experienced active reviewer and contributor to a subproject | [OWNERS] file approver entry |
+| Maintainer | Demonstrated responsibility and excellent technical judgement | Demonstrated responsibility and excellent technical judgement      | [Maintainers] file entry     |
 
 ## New contributors
 
@@ -137,6 +138,40 @@ in an [OWNERS] file (for repos using the bot).
 - Mentor contributors and reviewers
 - May approve code contributions for acceptance
 
+## Maintainer
+
+Maintainers are responsible for the overall health and direction of the project.
+They must set technical direction and make or approve design decisions either
+directly or through delegation of these responsibilities.
+
+### Requirements
+
+- Deep understanding of the technical goals and direction of the project.
+- Deep understanding of the technical domain (specifically the language) of the project.
+- Sustained contributions to design and direction by doing all of:
+  - Authoring and reviewing proposals
+  - Initiating, contributing and resolving discussions (e.g. emails, GitHub issues, meetings)
+  - Identifying subtle or complex issues in designs and implementation PRs
+- Nominated by a maintainer and pass super-majority(two-thirds/ 66.66%) vote.
+
+### Responsibilities and privileges
+
+- Maintaining the project: responsible for ensuring that the project remains stable, 
+  secure, and up-to-date, including fixing bugs, addressing security vulnerabilities 
+  and releasing new versions of the project as needed.
+- Managing contributions: responsible for managing contributions to the project, 
+  including code/non-code contributions, bug reports and feature requests.
+- Communicating with the community: responsible for communicating with the project's
+  community, including users, developers, and other contributors. This may involve
+  responding to questions, addressing concerns, and providing updates on the project's
+  status.
+- Setting project goals and priorities: responsible for setting the project's goal
+  and priorities, and for ensuring that the project remains aligned with these goals
+  over time.
+- Ensuring project sustainability: responsible for ensuring that the project remains
+  sustainable over the long-term, including managing dependencies, ensuring compatibility
+  with other projects, and planning for the future of the project.
+
 ## Inactive members
 
 _Members are continuously active contributors in the community._
@@ -176,3 +211,4 @@ before being able to contribute effectively.
 [OWNERS]: /contributors/guide/owners.md
 [two-factor authentication]: https://help.github.com/articles/about-two-factor-authentication
 [Devstats project]: https://karmada.devstats.cncf.io/
+[Maintainers]: https://github.com/karmada-io/karmada/blob/master/MAINTAINERS.md
