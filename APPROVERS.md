@@ -7,7 +7,7 @@ Please keep the below list sorted in ascending order.
 ## Approvers
 
 | Approver      | GitHub ID           | Affiliation             | Owners files                                                                                                                                  |
-| ------------- | ------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------- | ------------------- |-------------------------| --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Chauncey      | @chaunceyjiang      | DaoCloud                | 1. karmada-io/karmada pkg/controllers<br>2. karmada-io/karmada pkg/metricsadapter/<br>3. karmada-io/karmada cmd/metrics-adapter/<br>...       |
 | Future        | @pidb               | AIML INSTITUTE          | karmada-io/karmada charts/                                                                                                                    |
 | Hanbo Li      | @mrlihanbo          | ByteDance               | karmada-io/karmada hack/                                                                                                                      |
@@ -26,6 +26,6 @@ Please keep the below list sorted in ascending order.
 | Yasong Li     | @liys87x            | Hualala                 | 1. karmada-io/karmada pkg/search/<br>2. karmada-io/karmada cmd/karmada-search/                                                                |
 | Yifan Shen    | @zoroyouxi          | ICBC                    | karmada-io/community                                                                                                                          |
 | Yiheng Ci     | @lfbear             | VIPKID                  | karmada-io/karmada hack/                                                                                                                      |
-| Yingjun Wu    | @wuyingjun-lucky    | China Mobile            | karmada-io/karmada pkg/karmadactl/addons/                                                                                                     |
+| Yingjun Wu    | @wuyingjun-lucky    | China Mobile Cloud      | karmada-io/karmada pkg/karmadactl/addons/                                                                                                     |
 | Zhe Cheng     | @lonelyCZ           | SEL-Zhejiang University | 1. karmada-io/karmada cmd/<br>2. karmada-io/karmada operator/<br>3. karmada-io/karmada pkg/karmadactl/                                        |
 | Zhen Chang    | @XiShanYongYe-Chang | Huawei                  | 1. karmada-io/karmada test/<br>2. karmada-io/karmada pkg/search/<br>3. karmada-io/karmada pkg/registry/<br>...                                |
