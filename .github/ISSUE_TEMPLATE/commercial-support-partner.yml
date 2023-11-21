@@ -1,0 +1,29 @@
+name: Karmada Commercial Support Request
+description: Request to be a Karmada Commercial Support Partner
+title: "REQUEST: Organization <Organization name> that provides commercial support to Karmada New Commercial Support "
+body:
+- id: org_name
+  type: textarea
+  attributes:
+    label: "Org or company name"
+    description: Name of the organization or company offering the commercial support
+- id: org_description
+  type: textarea
+  attributes:
+    label: "Org or company description"
+    description: Description of the organization or company offering the commercial support
+- id: website_url
+  type: textarea
+  attributes:
+    label: "Org or company Website"
+    description: This organization provides an associated URL for the introduction of Karmada commercial support
+- id: org_logo
+  type: textarea
+  attributes:
+    label: "Org or company logo"
+    description: Organizations offering business support programs logo images(perfer png)
+- id: contact
+  type: textarea
+  attributes:
+    label: "Contact me"
+    description: Contact information of the organization that provides commercial support(github id or email)
