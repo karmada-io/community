@@ -7,7 +7,7 @@ Please keep the below list sorted in ascending order.
 ## Reviewers
 
 | Approver        | GitHub ID           | Affiliation             | Owners files                                                                                                                                   |
-| --------------- | ------------------- |-------------------------| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | Chauncey        | @chaunceyjiang      | DaoCloud                | 1. karmada-io/karmada pkg/controllers<br>2. karmada-io/karmada pkg/metricsadapter/<br>3. karmada-io/karmada cmd/metrics-adapter/<br>...        |
 | Baofa Fan       | @carlory            | DaoCloud                | karmada-io/karmada pkg/karmadactl                                                                                                              |
 | Future          | @pidb               | AIML INSTITUTE          | karmada-io/karmada charts/                                                                                                                     |
@@ -21,6 +21,7 @@ Please keep the below list sorted in ascending order.
 | Lei Xue         | @carmark            | Moore Threads           | karmada-io/community                                                                                                                           |
 | Michael Yao     | @windsonsea         | DaoCloud                | karmada-io/website i18n/                                                                                                                       |
 | Prodan          | @prodanlabs         | Independent             | karmada-io/karmada pkg/karmadactl/cmdinit/                                                                                                     |
+| Rentian Zhou    | @Vacant2333         |                         | karmada-io/karmada test/                                                                                                                       |
 | Rui Fang        | @Garrybest          | Tencent                 | karmada-io/karmada                                                                                                                             |
 | Rui Jiang       | @jrkeen             | BMW-CIH                 | karmada-io/karmada charts/                                                                                                                     |
 | Rupesh Gelal    | @rgrupesh           | Independent             | karmada-io/website                                                                                                                             |
