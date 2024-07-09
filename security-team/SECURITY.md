@@ -55,3 +55,18 @@ The Karmada project maintains release branches for the most recent three minor r
 Our typical patch release cadence is every 3 months. Critical bug fixes may cause a more immediate release outside of the normal cadence. We also aim to not make releases during major holiday periods.
 
 See the [Karmada releases page](https://github.com/karmada-io/karmada/releases) for information on supported versions of Karmada.
+
+## Dependencies policy
+
+Dependencies are evaluated before being introduced to ensure they:
+
+1) are actively maintained
+2) are maintained by trustworthy maintainers 
+3) are licensed in a way not to impact the Karmada license based on [the CNCF license allowlist](https://github.com/cncf/foundation/blob/main/allowed-third-party-license-policy.md).
+
+
+These evaluations vary from dependency to dependencies.
+
+Dependencies are also scheduled for removal if the project has been deprecated or if the project is no longer maintained. Additionally based on license changes we replace dependencies as necessary.
+
+CVEs in dependencies will be patched for all supported versions if the CVE is applicable and is assessed by [trivy](https://github.com/aquasecurity/trivy). Automation generates a new [trivy scan](https://github.com/karmada-io/karmada/blob/master/.github/workflows/ci-image-scanning.yaml) after each pull request gets merged and alerts are addressed.
