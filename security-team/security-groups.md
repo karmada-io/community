@@ -18,10 +18,11 @@ cncf-karmada-security@lists.cncf.io
 
 Owners:
 
-- [wangzefeng@huawei.com](mailto:wangzefeng@huawei.com)
-- [renhongcai@huawei.com](mailto:renhongcai@huawei.com)
+- Zefeng Wang([@Kevin Wang](https://github.com/kevin-wangzefeng)), [wangzefeng@huawei.com](mailto:wangzefeng@huawei.com)
+- Hongcai Ren([@RainbowMango](https://github.com/rainbowmango)), [renhongcai@huawei.com](mailto:renhongcai@huawei.com)
 
 Members:
 
-- [wangzefeng@huawei.com](mailto:wangzefeng@huawei.com)
-- [renhongcai@huawei.com](mailto:renhongcai@huawei.com)
+- Zefeng Wang([@Kevin Wang](https://github.com/kevin-wangzefeng)), [wangzefeng@huawei.com](mailto:wangzefeng@huawei.com)
+- Hongcai Ren([@RainbowMango](https://github.com/rainbowmango)), [renhongcai@huawei.com](mailto:renhongcai@huawei.com)
+- Zhuang Zhang([@zhzhuang-zju](https://github.com/zhzhuang-zju)), [guyue0864@gmail.com](mailto:guyue0864@gmail.com)
