@@ -9,6 +9,7 @@
 | KubeDay Israel 2023 | [Simplifying Multi-cluster Kubernetes Management with Karmada ](https://www.youtube.com/watch?v=WCrIhRNBZ9I)                   | Eliran Bivas               |
 | KubeCon(NA 2024)    | [Bloomberg’s Journey to Improve Resource Utilization in a Multi-Cluster Platform](https://www.youtube.com/watch?v=lMtCSaHI9Uk) | Yao Weng, Leon Zhou        |
 | KubeCon(NA 2024)    | [Bloomberg's Journey to Manage a Multi-Cluster Training Application with Karmada](https://www.youtube.com/watch?v=PmaiEKpM1-Q) | Yifan Zhang, Wei-Cheng Lai |
+| KubeCon India 2024  | [Karmada: Project Introduction and Updates - Project Lightning Talk](https://www.youtube.com/watch?v=s8VmWBRAb7o)              | Affan M.                   | 
 
 ## Chinese Talks
 
