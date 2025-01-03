@@ -10,6 +10,9 @@ cncf-karmada-distributors-announce@lists.cncf.io
 
 Maintained by [Security Team](#the-security-team).
 
+Members:
+- kubernetes-security@huawei.com
+
 ### The Security Team
 
 Email:
