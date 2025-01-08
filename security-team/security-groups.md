@@ -10,7 +10,8 @@ cncf-karmada-distributors-announce@lists.cncf.io
 
 Maintained by [Security Team](#the-security-team).
 
-Members:
+Members(Please keep the below list sorted in ascending order):
+- kubernetes-security@daocloud.io
 - kubernetes-security@huawei.com
 
 ### The Security Team
