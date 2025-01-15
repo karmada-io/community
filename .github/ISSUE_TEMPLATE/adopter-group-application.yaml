@@ -31,8 +31,8 @@ body:
     id: email
     attributes:
       label: Email
-      description: The email address you want to use for joining the Karmada Adopter mail group.
-      placeholder: ex. example[@]awesomecorp.com
+      description: The email address you want to use for joining the Karmada Adopter mail group. Please use `[at]` instead of `@` to hide your email address from crawlers.
+      placeholder: ex. example[at]awesomecorp.com
     validations:
       required: true
   - type: input
