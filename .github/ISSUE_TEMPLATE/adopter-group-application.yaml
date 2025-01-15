@@ -1,0 +1,68 @@
+name: Karmada Adopter Group Membership Request
+description: Use this form to apply for joining the Karmada Adopter Group.
+title: "Karmada Adopter Group Application for [Your Name]"
+labels: ["area/github-membership ", "adopter-group-membership"]
+assignees:
+  - RainbowMango
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in joining the Karmada Adopter Group! 
+        Please fill out this form with all the necessary information. 
+        The project maintainers will review your application and get back to you shortly.
+  - type: input
+    id: developer-name
+    attributes:
+      label: Your Name
+      description: Please enter your full name.
+      placeholder: ex. Arya Stark
+    validations:
+      required: true
+  - type: input
+    id: company-name
+    attributes:
+      label: Company Name
+      description: Please enter the name of your company or organization.
+      placeholder: ex. AwesomeCorp
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      description: The email address you want to use for joining the Karmada Adopter mail group. Please use `[at]` instead of `@` to hide your email address from crawlers.
+      placeholder: ex. example[at]awesomecorp.com
+    validations:
+      required: true
+  - type: input
+    id: github-id
+    attributes:
+      label: GitHub ID
+      description: The GitHub ID for joining the karmada-adopter-group team on GitHub.
+      placeholder: ex. @example_user
+    validations:
+      required: true
+  - type: input
+    id: karmada-version
+    attributes:
+      label: Current Karmada Version in Use
+      description: Please specify the version of Karmada you are currently using.
+      placeholder: ex. v1.12.0
+    validations:
+      required: true
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements(Things that you are recommended to do along with the application)
+      options:
+        - label: I have reviewed the [Karmada Adopter Group guidelines](https://github.com/karmada-io/community/blob/main/adopter-group/README.md)
+          required: true
+        - label: I have [enabled 2FA on my GitHub account](https://github.com/settings/security)
+          required: true
+        - label: I have subscribed to the [Karmada mailing list](https://groups.google.com/forum/#!forum/karmada)
+          required: true
+        - label: "Ensure your [affiliation in gitdm](https://github.com/cncf/gitdm?tab=readme-ov-file#addingupdating-affiliation) is up to date (gitdm is used by [devstats](https://k8s.devstats.cncf.io/) to track affiliation)"
+          required: true
+        - label: "Ensure your [affiliation in openprofile.dev](https://openprofile.dev/edit/profile) is up to date (used by [LFX Insights](https://insights.lfx.dev/) to track affiliation, will replace gitdm in the future)"
+          required: true
