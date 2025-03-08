@@ -172,6 +172,38 @@ directly or through delegation of these responsibilities.
   sustainable over the long-term, including managing dependencies, ensuring compatibility
   with other projects, and planning for the future of the project.
 
+
+### The structure of the Maintainers
+
+- No single vendor can exceed 50% of the total number of maintainers.
+
+### Changes in Maintainership
+
+#### Maintainer recruiting
+
+The maintainers have the authority to nominate new maintainers who meet the maintainer requirements listed above.
+When nominating new maintainers, a public issue should be opened against the `karmada-io/community` repo with 
+detailed contribution metrics for the candidate. Then, the current active maintainers vote on this issue. 
+Once a candidate passes a super-majority vote (see requirement listed above), they will officially become a 
+maintainer.
+
+In such a case:
+- A PR is required to add the new maintainer to the [list of Karmada Maintainers](https://github.com/karmada-io/community/blob/main/MAINTAINERS.md).
+- A PR is required to add the new maintainer to the [list of CNCF Maintainers](https://maintainers.cncf.io/).
+- The new maintainer will be invited to join the [Karmada Maintainer mailing list](cncf-karmada-maintainers@lists.cncf.io) by current maintainers.
+
+#### Maintainer Retirement
+- If a Maintainer feels they cannot fulfill the "Responsibilities and privileges", they are free to step down.
+- The community will adjust the list of maintainers based on the following factors
+  - The activity level and contribution level of the maintainer in the past six months.
+  - Balance of personnel among vendors.
+
+In such a case:
+
+- A PR is required to move the maintainer to the `Emeritus Maintainers` section of the [list of Karmada Maintainers](https://github.com/karmada-io/community/blob/main/MAINTAINERS.md).
+- A PR is required to remove the maintainer from the [list of CNCF Maintainers](https://maintainers.cncf.io/).
+- Remove the maintainer from the [Karmada Maintainer mailing list](cncf-karmada-maintainers@lists.cncf.io)
+
 ## Inactive members
 
 _Members are continuously active contributors in the community._
