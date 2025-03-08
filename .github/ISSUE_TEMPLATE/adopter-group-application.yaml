@@ -66,3 +66,15 @@ body:
           required: true
         - label: "Ensure your [affiliation in openprofile.dev](https://openprofile.dev/edit/profile) is up to date (used by [LFX Insights](https://insights.lfx.dev/) to track affiliation, will replace gitdm in the future)"
           required: true
+  - type: checkboxes
+    id: process-tracking
+    attributes:
+      label: Application Process Tracking (For Maintainers)
+      description: Tasks for maintainers to get you on board.
+      options:
+        - label: "[Maintainer] Verify applicant identity and information completeness"
+          required: false
+        - label: "[Maintainer] Invite applicant to [the Karmada Adopter mail group](https://groups.google.com/g/karmada-adopter-group)"
+          required: false
+        - label: "[Maintainer] Invite applicant to the Karmada Adopter GitHub team"
+          required: false
