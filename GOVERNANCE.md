@@ -80,6 +80,21 @@ at least once a year.
 The Security Response Team is responsible for handling all reports of security
 holes and breaches according to the [security policy](https://github.com/karmada-io/community/blob/main/security-team/SECURITY.md).
 
+## Roadmap
+### Rules
+- Define goals: Clearly articulate the long-term and short-term objectives of the project. These goals should align with the project's vision and values while meeting the needs of users or the community.
+- Prioritize: Rank the goals based on their importance and urgency. Considering resource and time constraints, ensure that the focus is placed on the most critical objectives.
+- Time-based planning: Break down the goals into milestones or phased tasks. Define specific objectives and measurable metrics for each phase to evaluate progress later on.
+- Transparency and communication: Share the roadmap openly with project stakeholders, including users, contributors, and other interested parties. This helps establish transparency and keeps everyone informed about the project's direction and plans.
+- Continuous adjustment: The project roadmap should be a dynamic document that may require adjustments and updates over time as new insights are gained. Regularly review and reassess the roadmap, making modifications as needed.
+- Approach: When creating the roadmap, take into account the opinions and suggestions of the community to ensure that the project's development aligns with broad expectations and needs.
+- Engage in discussions with project users and contributors to gather feedback and understand their requirements. This can be done through channels such as mailing lists, forums, and social media.
+
+### Changes in project Roadmap
+- Proposals will be collected from mailing lists, forums, GitHub issues, community meetings, social media, etc.
+- Changes to the project roadmap should be initiated as a pull request on GitHub.
+- Maintainers will make decisions based on a majority vote.
+
 ## Voting
 
 While most business in Karmada is conducted by "[lazy consensus](https://community.apache.org/committers/lazyConsensus.html)", 
