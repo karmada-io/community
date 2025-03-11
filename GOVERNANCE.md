@@ -69,6 +69,29 @@ violations by community members will be referred to the CNCF Code of Conduct
 Committee. Should the CNCF CoC Committee need to work with the project on resolution, the
 Maintainers will appoint a non-involved contributor to work with them.
 
+## Subprojects
+
+The subprojects of Karmada are closely related to the main project, serving as essential supplements that need to be
+released synchronously with the main version when necessary. Among other listed projects, some are for exploratory 
+purposes while others are related to peripheral ecosystem products.
+
+Current Sub-Projects:
+- [Dashboard](https://github.com/karmada-io/dashboard): Karmada Dashboard is a general-purpose, web-based control 
+panel for Karmada.
+
+The Karmada organization is open to receive new subprojects under its umbrella. To accept a project
+into the __Karmada__ organization, it has to meet the following criteria:
+
+- Must be licensed under the terms of the Apache License v2.0.
+- Must be closely related to one or more areas of the Karmada ecosystem, and Karmada relies heavily on these projects.
+- Must be supported by a Maintainer not associated or affiliated with the author(s) of the subprojects.
+- Sub-Projects can have their own repositories but follow the same governance mechanism as the main project.
+- Joining a subproject requires submitting an issue in the main project to obtain a 2/3 vote of approval from the Maintainers. Similarly, significant actions such as project archiving also require the consent of the Maintainers.
+
+The submission process starts as an Issue on the
+[karmada-io/community](https://github.com/karmada-io/community) repository with the required information
+mentioned above. Once a project is accepted, it's considered a __subproject under the umbrella of Karmada__.
+
 ## Security Response Team
 
 The Maintainers will appoint a Security Response Team to handle security reports.
