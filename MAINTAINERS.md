@@ -15,7 +15,7 @@ Please keep the below list sorted in ascending order.
 | Shiyi Xie   | @GitHubxsy        | Huawei        | <xieshiyi1@huawei.com>   |
 | Xiao Zhang  | @wawa0210         | DaoCloud      | <xiao.zhang@daocloud.io> |
 | Yifan Shen  | @zoroyouxi        | ICBC          | <shenyf@sdc.icbc.com.cn> |
-| Yiheng Ci   | @lfbear           | VIPKID        | <ciyiheng@vipkid.com.cn> |
+| Yiheng Ci   | @lfbear           | Tiger Brokers | <lfbear@gmail.com>       |
 
 ## Emeritus Maintainers
 Do not have any emeritus maintainers yet.
