@@ -79,9 +79,8 @@ By joining the Karmada Adopter Group, you will enjoy several benefits, including
 
 - **Visibility for Your Company**: Your company's profile will be featured on the list of [Karmada Adopter Group](https://karmada.io/adopters), increasing visibility within the community.
 - **Networking Opportunities**: Connect with other Karmada users, developers, and enthusiasts from around the world.
-- **Exclusive Content**: Access to special content such as blog posts, case studies, and success stories shared by other members.
+- **Stay Updated**: Receive timely notifications on critical updates, including key features, bug fixes, and security advisories.
 - **Event Participation**: Invitations to participate in Karmada-related events, including KubeCon + CloudNativeCon, webinars, and meetups.
-- **Early Access to Features**: Get early access to new features, beta releases, bug fixes, and security updates.
 - **Job Postings**: Opportunity to post job openings related to Karmada on the [Karmada Community Supported Job Board(not available now)](TBD).
 - **Business Opportunities**: Potential business connections and collaborations with other members of the Karmada ecosystem.
 
