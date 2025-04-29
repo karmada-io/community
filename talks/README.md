@@ -2,14 +2,18 @@
 
 ## English Talks
 
-| Event               | Video                                                                                                                          | Speaker                    |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| KubeCon(EU 2021)    | [Beyond federation: automating multi-cloud workloads with K8s native APIs](https://www.youtube.com/watch?v=LJJoaGszBVk)        | Kevin Wang                 |
-| KubeCon(EU 2022)    | [Sailing Multi Cloud Traffic Management With Karmada](https://www.youtube.com/watch?v=rzFbxeZQHWI)                             | Zhonghu Xu                 |
-| KubeDay Israel 2023 | [Simplifying Multi-cluster Kubernetes Management with Karmada ](https://www.youtube.com/watch?v=WCrIhRNBZ9I)                   | Eliran Bivas               |
-| KubeCon(NA 2024)    | [Bloomberg’s Journey to Improve Resource Utilization in a Multi-Cluster Platform](https://www.youtube.com/watch?v=lMtCSaHI9Uk) | Yao Weng, Leon Zhou        |
-| KubeCon(NA 2024)    | [Bloomberg's Journey to Manage a Multi-Cluster Training Application with Karmada](https://www.youtube.com/watch?v=PmaiEKpM1-Q) | Yifan Zhang, Wei-Cheng Lai |
-| KubeCon India 2024  | [Karmada: Project Introduction and Updates - Project Lightning Talk](https://www.youtube.com/watch?v=s8VmWBRAb7o)              | Affan M.                   | 
+| Event                  | Video                                                                                                                              | Speaker                          |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| KubeCon(EU 2021)       | [Beyond federation: automating multi-cloud workloads with K8s native APIs](https://www.youtube.com/watch?v=LJJoaGszBVk)            | Kevin Wang                       |
+| KubeCon(EU 2022)       | [Sailing Multi Cloud Traffic Management With Karmada](https://www.youtube.com/watch?v=rzFbxeZQHWI)                                 | Zhonghu Xu                       |
+| KubeDay Israel 2023    | [Simplifying Multi-cluster Kubernetes Management with Karmada ](https://www.youtube.com/watch?v=WCrIhRNBZ9I)                       | Eliran Bivas                     |
+| KubeCon(NA 2024)       | [Bloomberg’s Journey to Improve Resource Utilization in a Multi-Cluster Platform](https://www.youtube.com/watch?v=lMtCSaHI9Uk)     | Yao Weng, Leon Zhou              |
+| KubeCon(NA 2024)       | [Bloomberg's Journey to Manage a Multi-Cluster Training Application with Karmada](https://www.youtube.com/watch?v=PmaiEKpM1-Q)     | Yifan Zhang, Wei-Cheng Lai       |
+| KubeCon India 2024     | [Karmada: Project Introduction and Updates - Project Lightning Talk](https://www.youtube.com/watch?v=s8VmWBRAb7o)                  | Affan M.                         | 
+| KubeCon EU 2025 London | [Flink on Karmada: Building Resilient Data Pipelines on Multi-Cluster K8s](https://www.youtube.com/watch?v=mqXZ2T-jWuU)            | Michas Szacillo, Wang Li         | 
+| KubeCon EU 2025 London | [AI Workload Preemption in a Multi-Cluster Scheduling System at Bloomberg](https://www.youtube.com/watch?v=LrL5AcS2d5g)            | Leon Zhou, Wei-Cheng Lai         | 
+| KubeCon EU 2025 London | [Multi-cluster Orchestration System: Karmada Updates and Use Cases](https://www.youtube.com/watch?v=rbVV8WIJYww)                   | Hongcai Ren, Joe Nathan Abellard | 
+| KubeCon EU 2025 London | [Balancing Cost and Efficiency: Day2 Optimization of Multi-Cluster AI Infrastructure](https://www.youtube.com/watch?v=4pBhVVrCHyM) | Kevin Wang                       | 
 
 ## Chinese Talks
 
