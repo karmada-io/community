@@ -13,6 +13,7 @@ Maintained by [Security Team](#the-security-team).
 Members(Please keep the below list sorted in ascending order):
 - kubernetes-security@daocloud.io
 - kubernetes-security@huawei.com
+- cecloudcert@cestc.cn
 
 ### The Security Team
 
