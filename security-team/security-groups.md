@@ -31,3 +31,4 @@ Members:
 - Zefeng Wang([@Kevin Wang](https://github.com/kevin-wangzefeng)), [wangzefeng@huawei.com](mailto:wangzefeng@huawei.com)
 - Hongcai Ren([@RainbowMango](https://github.com/rainbowmango)), [renhongcai@huawei.com](mailto:renhongcai@huawei.com)
 - Zhuang Zhang([@zhzhuang-zju](https://github.com/zhzhuang-zju)), [guyue0864@gmail.com](mailto:guyue0864@gmail.com)
+- Yanfeng Huang([@yanfeng1992](https://github.com/yanfeng1992)), [huangyanfeng1992@gmail.com](mailto:huangyanfeng1992@gmail.com)
