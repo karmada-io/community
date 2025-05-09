@@ -5,29 +5,29 @@ about: Create a checklist of tasks for an organization to complete the onboardin
 ---
 Welcome to Karmada Adopters Onboarding!
 
-This is an issue created to help onboard your organization into the [adopters](https://karmada.io/adopters/).
+This is an issue created to help onboard your organization into the [Karmada Adopter Group](https://github.com/karmada-io/community/tree/main/adopter-group).
 
-We would like your organization to complete onboarding within one week of acceptance.
+**Company name**:
 
-Please track your progress by using "Quote reply" to create your own copy of this checklist in an issue, so that you can update the status as you finish items.
+**Link to the company website**:
 
-**Things that Karmada will need from your organization:**
+**Country**:
 
-- [ ] Name of your organization or company
-- [ ] Link to your website
-- [ ] Your country
-- [ ] Your contact info(such as Email, Twitter, WeChat)
-- [ ] Usage scenario
-- [ ] Usage stage(evaluating, production)
-- [ ] Logo(Optional, this will not be used for commercial purposes.) 
-- [ ] Whether your organization need the help from community
+**Contact info (such as Email, Twitter, WeChat)**:
 
-To complete the above information, please leave a comment on the [issue](https://github.com/karmada-io/karmada/issues/4540).
+**Usage scenario**:
 
-**Things that your organization need do or karmada community will help to do:**
+**Logo**:
 
-- [ ] Edit the list of adopters in [adopters.md](https://github.com/karmada-io/website/blob/main/src/pages/adopters.md) and open a Pull Request to [karmada-io/website](https://github.com/karmada-io/website).
-- [ ] Edit the list of adopters in [adopters.md (Chinese)](https://github.com/karmada-io/website/blob/main/i18n/zh/docusaurus-plugin-content-pages/adopters.md) and open a Pull Request to [karmada-io/website](https://github.com/karmada-io/website).
+**Whether the organization needs any help from community**:
+
+**Things that need to be done to complete the application:**
+
+- [ ] Join the list of adopters in [adopters.md](https://github.com/karmada-io/website/blob/main/src/pages/adopters.md) by opening a Pull Request to [karmada-io/website](https://github.com/karmada-io/website).
+- [ ] Join the list of adopters in [adopters.md (Chinese)](https://github.com/karmada-io/website/blob/main/i18n/zh/docusaurus-plugin-content-pages/adopters.md) by opening a Pull Request to [karmada-io/website](https://github.com/karmada-io/website).
+- [ ] (Optional) Share the use case at community meeting.
+- [ ] (Optional) Publish an official blog post.
+- [ ] (Optional) Join the [supporters](https://karmada.io/).
 
 After completing all of the above tasks, you can see your organization in [adopters](https://karmada.io/adopters/).
 
