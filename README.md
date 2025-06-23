@@ -34,4 +34,4 @@ Karmada is under the Apache 2.0 license. See the [LICENSE](LICENSE) file for det
 
 ## Roadmap
 
-The community defines a high level roadmap for Karmada development and upcoming releases. See the [Karmada Roadmap](https://github.com/karmada-io/karmada/blob/master/ROADMAP.md) file for details.
+The community defines a high level roadmap for Karmada development and upcoming releases. See the [Karmada Roadmap](ROADMAP.md) file for details.
