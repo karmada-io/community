@@ -40,8 +40,10 @@ The Karmada and its leadership embrace the following values:
 The [Community Membership](https://github.com/karmada-io/community/blob/main/community-membership.md)
 outlines responsibilities and requirements for different roles in Karmada.
 
-Currently, the maintainers are the governing body for the project. This may 
-change as the community grows, such as by adopting an elected steering committee.
+Currently, the maintainers are the governing body for the project. To maintain 
+openness and vendor neutrality, `no single vendor or organization may hold more 
+than 50% of maintainer seats`. This may change as the community grows, such as by 
+adopting an elected steering committee.
 
 ## Meetings
 
@@ -127,9 +129,11 @@ A vote can be taken on [the developer mailing list](https://groups.google.com/fo
 for security or conduct matters. Votes may also be taken at [the developer meeting](https://github.com/karmada-io/community/#community-meeting).
 Any Maintainer may demand a vote be taken.
 
-Most votes require a simple majority of all Maintainers to succeed, except where
-otherwise noted. Two-thirds majority votes mean at least two-thirds of all 
-existing maintainers.
+**Specifically, the following actions require a two-thirds majority vote of all maintainers:**
+1. **Updating the project roadmap**
+2. **Growing new maintainers**
+3. **Accepting new subproject**
+4. **Updating the project governance charter**
 
 ## Modifying this Charter
 
