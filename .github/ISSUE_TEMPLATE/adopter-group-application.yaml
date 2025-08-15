@@ -62,7 +62,7 @@ body:
           required: true
         - label: I have subscribed to the [Karmada mailing list](https://groups.google.com/forum/#!forum/karmada)
           required: true
-        - label: "Ensure your [affiliation in gitdm](https://github.com/cncf/gitdm?tab=readme-ov-file#addingupdating-affiliation) is up to date (gitdm is used by [devstats](https://k8s.devstats.cncf.io/) to track affiliation)"
+        - label: "Ensure your [affiliation in gitdm](https://github.com/cncf/gitdm?tab=readme-ov-file#addingupdating-affiliation) is up to date (gitdm is used by [devstats](https://karmada.devstats.cncf.io/) to track affiliation)"
           required: true
         - label: "Ensure your [affiliation in openprofile.dev](https://openprofile.dev/edit/profile) is up to date (used by [LFX Insights](https://insights.lfx.dev/) to track affiliation, will replace gitdm in the future)"
           required: true
