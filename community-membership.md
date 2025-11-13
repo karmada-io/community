@@ -59,6 +59,7 @@ Members are expected to remain active contributors to the community.
 - Members can do `/lgtm` on open PRs.
 - They can be assigned to issues and PRs, and people can ask members for reviews with a `/cc @username`.
 - Members can do `/close` to close PRs as well.
+- Members are eligible to attend the CNCF Maintainer Summit (exclusive event during KubeCon).
 
 **Note:** members who frequently contribute code are expected to proactively
 perform code reviews and work towards becoming a primary *reviewer* for the
