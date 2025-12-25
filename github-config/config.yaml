@@ -1,8 +1,8 @@
 teams:
 - name: karmada-adopter-group
   maintainers:
-  - RainbowMango
   - kevin-wangzefeng
+  - RainbowMango
   members:
   - CharlesQQ
   - dongjiang1989
@@ -16,9 +16,10 @@ teams:
   - zach593
 - name: repo-admins
   maintainers:
-  - RainbowMango
   - kevin-wangzefeng
-  members: []
+  - RainbowMango
+  members:
+  - karmada-bot
 repositories:
 - name: api
   collaborators:
