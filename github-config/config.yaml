@@ -22,56 +22,38 @@ teams:
   - karmada-bot
 repositories:
 - name: api
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: community
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: dashboard
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: karmada
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: kubernetes
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: multi-cluster-ingress-nginx
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: multicluster-cloud-provider
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: playground
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
 - name: website
-  collaborators:
-    karmada-bot: admin
   teams:
     repo-admins: admin
   visibility: public
