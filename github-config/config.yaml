@@ -4,6 +4,8 @@ teams:
   - kevin-wangzefeng
   - RainbowMango
   members:
+  - Allen-987 # SenseTime
+  - baizhushui # SenseTime
   - CharlesQQ
   - dongjiang1989
   - guozheng-shen
@@ -14,6 +16,7 @@ teams:
   - vie-serendipity
   - yangsoon
   - zach593
+  - ZhengXinwei-F # SenseTime
 - name: repo-admins
   maintainers:
   - kevin-wangzefeng
