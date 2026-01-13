@@ -76,5 +76,5 @@ body:
           required: false
         - label: "[Maintainer] Invite applicant to [the Karmada Adopter mail group](https://groups.google.com/g/karmada-adopter-group)"
           required: false
-        - label: "[Maintainer] Invite applicant to the Karmada Adopter GitHub team"
+        - label: "[Maintainer] Invite applicant to [the Karmada Adopter GitHub team](https://github.com/orgs/karmada-io/teams/karmada-adopter-group) by adding the member to `github-config/config.yaml`"
           required: false
