@@ -14,6 +14,18 @@ The configurations in this directory serve to:
 
 - `config.yaml` - Complete configuration for teams, members, and repository permissions
 
+## Team Naming Convention
+
+When creating or naming teams, follow these conventions:
+
+1. **Organization-wide teams**: Use the `karmada-` prefix
+   - These teams have responsibilities spanning the entire organization
+   - Examples: `karmada-adopter-group`, `karmada-security-team`
+
+2. **Special Interest Groups (SIGs)**: Use the `sig-` prefix
+   - These teams focus on specific areas of interest or technical domains
+   - Examples: `sig-scalability`, `sig-ui`
+
 ## Making Changes
 
 To modify team memberships or repository permissions:
