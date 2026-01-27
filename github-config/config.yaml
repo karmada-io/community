@@ -24,6 +24,14 @@ teams:
   - RainbowMango
   members:
   - karmada-bot
+- name: karmada-security-team
+  maintainers:
+  - kevin-wangzefeng
+  - RainbowMango
+  members:
+  - warjiang
+  - yanfeng1992
+  - zhzhuang-zju
 repositories:
 - name: api
   teams:
