@@ -6,12 +6,7 @@ We sincerely request you to keep the vulnerability information confidential and 
 
 To report a vulnerability, please contact the Security Team: [cncf-karmada-security@lists.cncf.io](mailto:cncf-karmada-security@lists.cncf.io). You can email the Security Team with the security details and the details expected for [Karmada bug reports](https://github.com/karmada-io/karmada/blob/master/.github/ISSUE_TEMPLATE/bug-report.md). 
 
-The information of the Security Team members is described as follows:
-
-| Name                                                                  | Email                 |
-|-----------------------------------------------------------------------|-----------------------|
-| Kevin Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng)) | wangzefeng@huawei.com |
-| Hongcai Ren ([@RainbowMango](https://github.com/RainbowMango))        | renhongcai@huawei.com |
+The information of the Security Team members can be found [here](security-groups.md#the-security-team).
 
 ### E-mail Response
 
