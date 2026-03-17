@@ -40,10 +40,23 @@ The Karmada and its leadership embrace the following values:
 The [Community Membership](https://github.com/karmada-io/community/blob/main/community-membership.md)
 outlines responsibilities and requirements for different roles in Karmada.
 
-Currently, the maintainers are the governing body for the project. To maintain 
-openness and vendor neutrality, `no single vendor or organization may hold more 
-than 50% of maintainer seats`. This may change as the community grows, such as by 
-adopting an elected steering committee.
+Currently, the maintainers are the governing body for the project. To maintain
+openness and vendor neutrality, `no single vendor or organization may hold more
+than 50% of maintainer seats`.
+
+New maintainers are selected through a nomination and voting mechanism. Current
+maintainers nominate candidates who have demonstrated deep technical understanding
+and sustained contributions.
+
+There is no predefined limit on the number of maintainer seats. The community may
+grow the number of maintainers as needed based on project growth and contribution
+levels.
+
+Maintainers serve indefinitely and may remain in the role as long as they remain
+active and engaged with the project. Maintainers may step down voluntarily or may
+be transitioned to emeritus status based on inactivity and community balance
+considerations. See [community-membership.md](https://github.com/karmada-io/community/blob/main/community-membership.md)
+for detailed maintainer requirements and processes.
 
 ## Meetings
 
