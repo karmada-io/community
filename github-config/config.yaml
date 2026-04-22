@@ -19,6 +19,26 @@ teams:
   - yangsoon
   - zach593
   - ZhengXinwei-F # SenseTime
+- name: karmada-maintainers
+  maintainers:
+  - kevin-wangzefeng
+  - RainbowMango
+  members:
+  - carmark
+  - CharlesQQ
+  - GitHubxsy
+  - jabellard
+  - lfbear
+  - mrlihanbo
+  - mszacillo
+  - seanlaii
+  - warjiang
+  - wawa0210
+  - whitewindmills
+  - XiShanYongYe-Chang
+  - zach593
+  - zhzhuang-zju
+  - zoroyouxi
 - name: repo-admins
   maintainers:
   - kevin-wangzefeng
