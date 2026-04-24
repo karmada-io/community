@@ -6,18 +6,20 @@ teams:
   members:
   - Allen-987 # SenseTime
   - baizhushui # SenseTime
-  - CharlesQQ
-  - dongjiang1989
-  - guozheng-shen
-  - ivan-cai
+  - CharlesQQ # HelloGroup
+  - dongjiang1989 # iFLYTEK
+  - gjbravi # Wellhub
+  - guozheng-shen # Tongcheng Travel
+  - ivan-cai # Alibaba Cloud
   - kechujian-creator # Songke
-  - LivingCcj
+  - LivingCcj # Bilibili
   - liwang0513 # Bloomberg
-  - NickYadance
-  - stulzq
-  - vie-serendipity
-  - yangsoon
-  - zach593
+  - NickYadance # Shopee
+  - stulzq # Tongcheng Travel
+  - vie-serendipity # Alibaba Cloud
+  - xiaokangwang1992 # GMI Cloud
+  - yangsoon # RedNote
+  - zach593 # Trip.com Group
   - ZhengXinwei-F # SenseTime
 - name: karmada-maintainers
   maintainers:
