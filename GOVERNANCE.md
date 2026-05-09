@@ -146,7 +146,9 @@ Any Maintainer may demand a vote be taken.
 1. **Updating the project roadmap**
 2. **Growing new maintainers**
 3. **Accepting new subproject**
-4. **Updating the project governance charter**
+4. **Creating a new [SIG](sigs/README.md)**
+5. **Retiring a [SIG](sigs/README.md)**
+6. **Updating the project governance charter**
 
 ## Modifying this Charter
 
