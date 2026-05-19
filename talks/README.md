@@ -23,6 +23,12 @@
 | KubeCon NA 2025 Atlanta             | [Maximizing Global Potential: Cost-Optimized, High-Availability Workloads Across Regions](https://www.youtube.com/watch?v=VrXt_T8DkIo)              | Jingkang Jiang, Michael McCune, Praseeda Sathaye, Wei Jiang | 
 | KubeCon NA 2025 Atlanta             | [Karmada in Action: Scaling AI Workloads Across Multi-Cluster at Scale](https://www.youtube.com/watch?v=M1-yTjC2hTI)                                | Tessa Pham, Wei-Cheng Lai                                   | 
 | Open Source Summit 2025 Minneapolis | [Gotta Cache 'em All: Scaling AI Workloads With Model Caching in a Hybrid Cloud](https://www.youtube.com/watch?v=uUjUWaMn5K4)                       | Rituraj Singh, Jin Dong                                     | 
+| KubeCon EU 2026 Amsterdam           | [Multi-cluster Orchestration System: Karmada Updates and Use Cases - Project Lightning Talk](https://youtu.be/IlXsx4lMrQU?si=5s2BT1Vl8hK1D1EA)                   | Joe Nathan Abellard                                         |
+| KubeCon EU 2026 Amsterdam           | [Multi-cluster Orchestration System: Karmada Updates and Use Cases](https://youtu.be/NY3O_0G90rg?si=pRkQO4czP2Jlx9eQ)                                           | Hongcai Ren, Tessa Pham, Michas Szacillo, Wei-Cheng Lai, Zongqing Li |
+| KubeCon EU 2026 Amsterdam           | [Disaster Resilient Trino on Kubernetes: Multi-Cluster Setup With Karmada and Trino Gateway](https://youtu.be/vGjiXGdax98?si=yOB7BNUbTgQ5WOPV)                  | Sung Yun, Antoine Marthey                                   |
+| KubeCon EU 2026 Amsterdam           | [Achieving Resilient Multi-Cluster AI Inference on Kubernetes With Karmada and KubeRay](https://youtu.be/SEBoBbyUdz0?si=4wpOKUyeS5HTEcg2)                       | Wei-Cheng Lai, Han-Ju Chen                                  |
+| KubeCon EU 2026 Amsterdam           | [Breaking the Monolith: Decomposing and Governing Giant LLM Jobs Across Clusters](https://youtu.be/tCeWbdekqJE?si=dR7zb5u5a_AWOlx8)                            | Kevin Wang                                                  |
+| KubeCon EU 2026 Amsterdam           | [Zero-Downtime Migration from ingress-nginx to Istio in a Multi-Cluster Kubernetes Platform at Bloomberg](https://youtu.be/wix_PfQ61jY?si=_QVesF2sJ-F9vBRH)    | Joe Nathan Abellard                                         |
 
 
 ## Chinese Talks
