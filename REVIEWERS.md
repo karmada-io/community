@@ -17,7 +17,6 @@ Please keep the below list sorted in ascending order.
 | Chaosi Pan | @chaosi-zju | ByteDance | karmada-io/karmada/karmadactl/ |
 | Chauncey | @chaunceyjiang | DaoCloud | 1. karmada-io/karmada/pkg/controllers<br>2. karmada-io/karmada/pkg/metricsadapter/<br>3. karmada-io/karmada/cmd/metrics-adapter/<br>... |
 | Future | @pidb | AIML INSTITUTE | karmada-io/karmada/charts/ |
-| Hanbo Li | @mrlihanbo | ByteDance | karmada-io/karmada/hack/ |
 | Hongcai Ren | @RainbowMango | Huawei | 1. karmada-io/karmada<br>2. karmada-io/website |
 | Hui Jiang | @jhnine | Joint Cloud | karmada-io/dashboard |
 | Ihor Sychevskyi | @Arhell | Phalcon | karmada-io/website |
@@ -27,7 +26,6 @@ Please keep the below list sorted in ascending order.
 | Junhua He | @whitewindmills | CECloud | karmada-io/karmada/pkg/scheduler/ |
 | Jun Qian | @qianjun1993 | Tencent | karmada-io/karmada/pkg/scheduler/ |
 | Kevin Wang | @kevin-wangzefeng | Huawei | 1. karmada-io/karmada<br>2. karmada-io/website |
-| Lei Xue | @carmark | Moore Threads | karmada-io/community |
 | Michael Yao | @windsonsea | DaoCloud | karmada-io/website/i18n/ |
 | Michas Szacillo | @mszacillo | Bloomberg | karmada-io/karmada/controllers, webhook |
 | Prodan | @prodanlabs | Independent | karmada-io/karmada/pkg/karmadactl/cmdinit/ |
@@ -49,8 +47,6 @@ Please keep the below list sorted in ascending order.
 | Yangfeng Huang | @yanfeng1992 | CECloud | karmada-io/karmada/pkg/karmadactl |
 | Yan Li | @huntsman-li | Hualala | 1. karmada-io/karmada/pkg/search/<br>2. karmada-io/karmada/cmd/karmada-search/ |
 | Yasong Li | @liys87x | Hualala | 1. karmada-io/karmada/pkg/search/<br>2. karmada-io/karmada/cmd/karmada-search/ |
-| Yifan Shen | @zoroyouxi | ICBC | karmada-io/community |
-| Yiheng Ci | @lfbear | Tiger Brokers | karmada-io/karmada/hack/ |
 | Yike Bu | @yike21 | UESTC | karmada-io/karmada/pkg/resourceinterpreter/default/thirdparty/ |
 | Yingjun Wu | @wuyingjun-lucky | China Mobile Cloud | karmada-io/karmada/pkg/karmadactl/addons/ |
 | Yuanpeng Liang | @liangyuanpeng | Yunhorn | karmada-io/karmada/hack/ |
