@@ -31,7 +31,7 @@ Please keep the below list sorted in ascending order.
 | Michael Yao | @windsonsea | DaoCloud | karmada-io/website/i18n/ |
 | Michas Szacillo | @mszacillo | Bloomberg | karmada-io/karmada/controllers, webhook |
 | Prodan | @prodanlabs | Independent | karmada-io/karmada/pkg/karmadactl/cmdinit/ |
-| Qiangqiang Chang | @charlesqq | MoMo | karmada-io/karmada/webhook/, controllers |
+| Qiangqiang Chang | @charlesqq | Alibaba Cloud | karmada-io/karmada/webhook/, controllers |
 | Rentian Zhou | @Vacant2333 | Independent | karmada-io/karmada/test/ |
 | Rui Fang | @Garrybest | Tencent | karmada-io/karmada |
 | Rui Jiang | @jrkeen | BMW-CIH | karmada-io/karmada/charts/ |
