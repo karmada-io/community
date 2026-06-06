@@ -16,7 +16,7 @@ Please keep the below list sorted in ascending order.
 | Kevin Wang          | @kevin-wangzefeng   | Huawei        | <wangzefeng@huawei.com>      |
 | Lei Xue             | @carmark            | Moore Threads | <vfs@live.com>               |
 | Michas Szacillo     | @mszacillo          | Bloomberg     | <mszacillo@bloomberg.net>    |
-| Qiangqiang Chang    | @CharlesQQ          | Hello Group   | <charles_ali@qq.com>         |
+| Qiangqiang Chang    | @CharlesQQ          | Alibaba Cloud | <charles_ali@qq.com>         |
 | Shiyi Xie           | @GitHubxsy          | Huawei        | <xieshiyi1@huawei.com>       |
 | Wei-Cheng Lai       | @seanlaii           | Bloomberg     | <qazwsx0939059006@gmail.com> |
 | Xiao Zhang          | @wawa0210           | DaoCloud      | <xiao.zhang@daocloud.io>     |
