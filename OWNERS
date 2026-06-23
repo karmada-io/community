@@ -1,20 +1,22 @@
+# This OWNERS file is maintained following the Kubernetes Prow convention.
+# See https://www.kubernetes.dev/docs/guide/owners/ for more details.
+#
+# Want to be listed here? We'd love to have you!
+# Start by reviewing PRs, opening issues, and contributing fixes.
+# Active, high-quality contributions are the path to becoming a
+# reviewer and then an approver. See our community membership guide:
+# https://github.com/karmada-io/community/blob/main/community-membership.md
+
 reviewers:
-- carmark
 - GitHubxsy
 - kevin-wangzefeng
-- lfbear
-- mrlihanbo
 - RainbowMango
 - whitewindmills
 - XiShanYongYe-Chang
-- zoroyouxi
+
 approvers:
-- carmark
 - GitHubxsy
 - kevin-wangzefeng
-- lfbear
-- mrlihanbo
 - RainbowMango
 - whitewindmills
 - XiShanYongYe-Chang
-- zoroyouxi

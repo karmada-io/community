@@ -26,12 +26,9 @@ teams:
   - kevin-wangzefeng
   - RainbowMango
   members:
-  - carmark
   - CharlesQQ
   - GitHubxsy
   - jabellard
-  - lfbear
-  - mrlihanbo
   - mszacillo
   - seanlaii
   - warjiang
@@ -40,7 +37,6 @@ teams:
   - XiShanYongYe-Chang
   - zach593
   - zhzhuang-zju
-  - zoroyouxi
 - name: repo-admins
   maintainers:
   - kevin-wangzefeng
