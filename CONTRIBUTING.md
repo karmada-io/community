@@ -13,8 +13,12 @@ Welcome to Karmada!
         -   [File an Issue](#file-an-issue)
 -   [Contributor Workflow](#contributor-workflow)
     -   [Creating Pull Requests](#creating-pull-requests)
-    -   [Code Review](#code-review)
+        -   [PR Checklist](#pr-checklist)
+    -   [Commit Message Standards](#commit-message-standards)
+    -   [Review Timeline](#review-timeline)
     -   [Testing](#testing)
+    -   [Code Review](#code-review)
+    -   [Repository Setup](#repository-setup)
 
 # Before you get started
 
@@ -84,23 +88,106 @@ This is a rough outline of what a contributor's workflow looks like:
 - Create a topic branch from where to base the contribution. This is usually master.
 - Make commits of logical units.
 - Push changes in a topic branch to a personal fork of the repository.
-- Submit a pull request to [karmada-io/karmada](https://github.com/karmada-io/karmada).
+- Submit a pull request to the upstream repository (the project repository you forked from).
 
 ## Creating Pull Requests
 
 Pull requests are often called simply "PR".
 Karmada generally follows the standard [github pull request](https://help.github.com/articles/about-pull-requests/) process.
 To submit a proposed change, please develop the code/fix and add new test cases.
-After that, run these local verifications before submitting pull request to predict the pass or
+After that, run whatever verification steps the target repository's contributing guide specifies before submitting a pull request to predict the pass or
 fail of continuous integration.
 
-* Run and pass `make verify`
-* Run and pass `make test`
+### PR Checklist
+
+Before submitting your PR, confirm the following:
+
+- [ ] Commits follow the [Commit Message Standards](#commit-message-standards) below with DCO sign-off (`git commit -s`)
+- [ ] PR description explains what changed and why
+- [ ] Related issue is linked (`Fixes #123` or `Refs #123`)
+- [ ] PR is scoped to one logical change; unrelated changes are split into separate PRs
+- [ ] Verification steps documented in the target repository have been run
+
+## Commit Message Standards
+
+Karmada follows a conventional commit format across all repositories.
+
+### Format
+
+```
+<type>(<scope>): <short summary>
+
+<optional body>
+
+<optional footer>
+```
+
+### Rules
+
+- **Subject line**: 50 characters or fewer, imperative mood ("fix bug" not "fixed bug")
+- **Type**: one of `feat`, `fix`, `docs`, `test`, `refactor`, `chore`, `ci`
+- **Scope**: the component affected (e.g., `scheduler`, `docs`, `api`)
+- **Body**: explain the *why*, not the *what*
+- **Footer**: reference issues (`Fixes #123`)
+
+### Examples
+
+```
+fix(scheduler): correct replica count overflow
+```
+
+```
+docs(contributing): add commit standards and PR guidelines
+```
+
+### DCO Sign-off
+
+All commits must include a Developer Certificate of Origin sign-off:
+
+```bash
+git commit -s -m "type(scope): your message"
+```
+
+This appends `Signed-off-by: Your Name <your@email.com>` to the commit.
+
+For more guidance, see [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
+
+## Review Timeline
+
+Maintainers aim to provide an initial review response within **5 business days**.
+
+If you haven't received feedback after **7 days**, feel free to:
+
+1. Leave a polite comment on the PR asking for a status update.
+2. Ping the relevant reviewer from [REVIEWERS.md](REVIEWERS.md) or [APPROVERS.md](APPROVERS.md).
+3. Ask in the [#karmada Slack channel](https://cloud-native.slack.com/archives/C02MUF8QXUN).
+
+Note that maintainers are volunteers — please be patient and respectful.
+
+## Testing
+
+Testing requirements vary by repository. In general:
+
+- New features should include tests that cover the happy path and key error cases.
+- Bug fixes should include a regression test that fails before the fix and passes after.
+- For code repositories, run the unit and integration tests documented in that repo before opening a PR.
+- Refer to the target repository's contributing guide for specific test commands and coverage expectations.
 
 ## Code Review
 
 To make it easier for your PR to receive reviews, consider the reviewers will need you to:
 
 * follow [good coding guidelines](https://github.com/golang/go/wiki/CodeReviewComments).
-* write [good commit messages](https://chris.beams.io/posts/git-commit/).
+* follow the [Commit Message Standards](#commit-message-standards).
 * break large changes into a logical series of smaller patches which individually make easily understandable changes, and in aggregate solve a broader issue.
+
+## Repository Setup
+
+Since the Karmada organization has multiple repositories, environment setup differs per repo. Before contributing, check the contributing guide of the specific repo you are working in:
+
+| Repository | Setup docs |
+|---|---|
+| [karmada-io/karmada](https://github.com/karmada-io/karmada) | [CONTRIBUTING.md](https://github.com/karmada-io/karmada/blob/master/CONTRIBUTING.md) |
+| [karmada-io/website](https://github.com/karmada-io/website) | [README.md](https://github.com/karmada-io/website/blob/main/README.md) |
+| [karmada-io/community](https://github.com/karmada-io/community) | None — docs/governance only, no build step required |
+| Other repos | See [github.com/karmada-io](https://github.com/karmada-io) |
