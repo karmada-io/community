@@ -88,7 +88,7 @@ This is a rough outline of what a contributor's workflow looks like:
 - Create a topic branch from where to base the contribution. This is usually master.
 - Make commits of logical units.
 - Push changes in a topic branch to a personal fork of the repository.
-- Submit a pull request to the repository you forked.
+- Submit a pull request to the upstream repository (the project repository you forked from).
 
 ## Creating Pull Requests
 
@@ -178,7 +178,7 @@ Testing requirements vary by repository. In general:
 To make it easier for your PR to receive reviews, consider the reviewers will need you to:
 
 * follow [good coding guidelines](https://github.com/golang/go/wiki/CodeReviewComments).
-* write [good commit messages](https://chris.beams.io/posts/git-commit/).
+* follow the [Commit Message Standards](#commit-message-standards).
 * break large changes into a logical series of smaller patches which individually make easily understandable changes, and in aggregate solve a broader issue.
 
 ## Repository Setup
@@ -189,5 +189,5 @@ Since the Karmada organization has multiple repositories, environment setup diff
 |---|---|
 | [karmada-io/karmada](https://github.com/karmada-io/karmada) | [CONTRIBUTING.md](https://github.com/karmada-io/karmada/blob/master/CONTRIBUTING.md) |
 | [karmada-io/website](https://github.com/karmada-io/website) | [README.md](https://github.com/karmada-io/website/blob/main/README.md) |
-| [karmada-io/community](https://github.com/karmada-io/community) | This file — docs/governance only, no build step required |
+| [karmada-io/community](https://github.com/karmada-io/community) | None — docs/governance only, no build step required |
 | Other repos | See [github.com/karmada-io](https://github.com/karmada-io) |
