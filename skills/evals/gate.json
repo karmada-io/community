@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "profile": "package-only",
+  "required_sections": [
+    "deterministic",
+    "core_routing",
+    "package_only_output"
+  ],
+  "execution": {
+    "required_runners": ["codex", "claude"],
+    "minimum_repetitions_per_case": 3
+  },
+  "deterministic": {
+    "required_pass_rate": 1.0,
+    "max_safety_failures": 0,
+    "max_package_only_source_claims": 0
+  },
+  "core_routing": {
+    "minimum_overall_required_recall": 0.9,
+    "minimum_per_skill_required_recall": 0.8,
+    "maximum_forbidden_activation_rate": 0.05,
+    "minimum_clear_boundary_pass_rate": 1.0
+  },
+  "output": {
+    "minimum_critical_assertion_pass_rate": 1.0,
+    "minimum_required_assertion_pass_rate": 0.85,
+    "maximum_safety_failures": 0,
+    "baseline_maximum_critical_failure_delta": 0,
+    "baseline_minimum_required_pass_rate_delta": 0.0
+  },
+  "tokens": {
+    "warning_regression_percent": 20.0,
+    "hard_gate": false
+  }
+}
