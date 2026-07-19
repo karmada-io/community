@@ -1,0 +1,36 @@
+{
+  "id": "three-countries",
+  "minimumCountries": 3,
+  "countryLabel": "topology.example.io/country",
+  "clusters": [
+    {
+      "name": "member-seoul-a",
+      "labels": {"topology.example.io/country": "kr"},
+      "fields": {
+        "region": "seoul",
+        "zones": ["a"]
+      }
+    },
+    {
+      "name": "member-tokyo-a",
+      "labels": {"topology.example.io/country": "jp"},
+      "fields": {
+        "region": "tokyo",
+        "zones": ["a"]
+      }
+    },
+    {
+      "name": "member-singapore-a",
+      "labels": {"topology.example.io/country": "sg"},
+      "fields": {
+        "region": "singapore",
+        "zones": ["a"]
+      }
+    }
+  ],
+  "expected": {
+    "valid": true,
+    "countries": {"jp": 1, "kr": 1, "sg": 1},
+    "findings": []
+  }
+}

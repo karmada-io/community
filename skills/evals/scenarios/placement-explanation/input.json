@@ -1,0 +1,42 @@
+{
+  "id": "observed-binding",
+  "requiredLabels": {
+    "region": "us-east"
+  },
+  "clusters": [
+    {
+      "name": "member-a",
+      "ready": true,
+      "labels": {
+        "region": "us-east"
+      }
+    },
+    {
+      "name": "member-b",
+      "ready": false,
+      "labels": {
+        "region": "us-east"
+      }
+    },
+    {
+      "name": "member-c",
+      "ready": true,
+      "labels": {
+        "region": "eu-west"
+      }
+    }
+  ],
+  "bindingClusters": ["member-a"],
+  "historicalEvidenceComplete": false,
+  "expected": {
+    "policyEligible": ["member-a", "member-b"],
+    "policyIneligible": {
+      "member-c": ["label-mismatch:region"]
+    },
+    "observedSelected": ["member-a"],
+    "observedRejected": {},
+    "unresolved": ["member-b"],
+    "contradictoryObserved": [],
+    "historicalEvidenceComplete": false
+  }
+}

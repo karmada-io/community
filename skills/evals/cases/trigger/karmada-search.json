@@ -1,0 +1,131 @@
+{
+  "skill_name": "karmada-search",
+  "queries": [
+    {
+      "id": "se-01",
+      "split": "train",
+      "query": "From an operational perspective, debug why Karmada Search does not return a Deployment from a member cluster.",
+      "should_trigger": true,
+      "rationale": "Karmada Search visibility incident."
+    },
+    {
+      "id": "se-02",
+      "split": "train",
+      "query": "The search.karmada.io APIService has Available=False. What should I check for karmada-search?",
+      "should_trigger": true,
+      "rationale": "Search APIService health."
+    },
+    {
+      "id": "se-03",
+      "split": "train",
+      "query": "Check whether ResourceRegistry targetCluster and resourceSelectors are causing the Search cache to be empty.",
+      "should_trigger": true,
+      "rationale": "ResourceRegistry scope diagnosis."
+    },
+    {
+      "id": "se-04",
+      "split": "train",
+      "query": "The Karmada Search proxying API returns 404 for a pods/log request.",
+      "should_trigger": true,
+      "rationale": "Search proxying operational issue."
+    },
+    {
+      "id": "se-05",
+      "split": "train",
+      "query": "After configuring backendStore.openSearch in ResourceRegistry, the logs report Cannot upsert.",
+      "should_trigger": true,
+      "rationale": "OpenSearch backend diagnosis."
+    },
+    {
+      "id": "se-11",
+      "split": "train",
+      "query": "Search this repository for the string ResourceBinding.",
+      "should_trigger": false,
+      "rationale": "Generic repository search."
+    },
+    {
+      "id": "se-12",
+      "split": "train",
+      "query": "Give me a kubectl command that finds Deployments in all namespaces.",
+      "should_trigger": false,
+      "rationale": "Ordinary Kubernetes query."
+    },
+    {
+      "id": "se-13",
+      "split": "train",
+      "query": "Explain why the scheduler selected member-a.",
+      "should_trigger": false,
+      "rationale": "Placement belongs to explain-placement."
+    },
+    {
+      "id": "se-14",
+      "split": "train",
+      "query": "The clusterStatus controller in controller-manager marks member-a as NotReady.",
+      "should_trigger": false,
+      "rationale": "Controller-manager cluster status issue."
+    },
+    {
+      "id": "se-15",
+      "split": "train",
+      "query": "Create a PropagationPolicy that deploys a global workload to member-a and member-b.",
+      "should_trigger": false,
+      "rationale": "Policy generation."
+    },
+    {
+      "id": "se-16",
+      "split": "validation",
+      "query": "The Search cache returns empty results in an environment without OpenSearch. In what order should I investigate?",
+      "should_trigger": true,
+      "rationale": "Default cache path diagnosis."
+    },
+    {
+      "id": "se-17",
+      "split": "validation",
+      "query": "The ResourceRegistry namespace selector matches only default, and kube-system resources do not appear in Search.",
+      "should_trigger": true,
+      "rationale": "ResourceRegistry namespace scope."
+    },
+    {
+      "id": "se-18",
+      "split": "validation",
+      "query": "What read-only evidence should I inspect before issuing a PATCH through Search proxying?",
+      "should_trigger": true,
+      "rationale": "Safe proxying troubleshooting."
+    },
+    {
+      "id": "se-19",
+      "split": "validation",
+      "query": "Check whether a cluster where apps/v1 Deployment is disabled in APIEnablements is omitted from Search results.",
+      "should_trigger": true,
+      "rationale": "Cluster APIEnablement boundary."
+    },
+    {
+      "id": "se-20",
+      "split": "validation",
+      "query": "Work has Applied=False and the Search cache is also empty. Debug the propagation pipeline first.",
+      "should_trigger": false,
+      "rationale": "Primary request is propagation pipeline."
+    },
+    {
+      "id": "se-21",
+      "split": "validation",
+      "query": "Explain step by step why this ResourceBinding selected member-a.",
+      "should_trigger": false,
+      "rationale": "Placement interpretation belongs to karmada-explain-placement."
+    },
+    {
+      "id": "se-22",
+      "split": "validation",
+      "query": "Explain the Kubernetes API aggregation layer in general.",
+      "should_trigger": false,
+      "rationale": "General Kubernetes concept, not a Karmada Search task."
+    },
+    {
+      "id": "se-23",
+      "split": "validation",
+      "query": "Refactor the karmada-search package structure from a maintainer's perspective.",
+      "should_trigger": true,
+      "rationale": "Karmada Search contributor implementation and architecture work."
+    }
+  ]
+}

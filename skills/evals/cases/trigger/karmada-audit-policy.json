@@ -1,0 +1,145 @@
+{
+  "skill_name": "karmada-audit-policy",
+  "queries": [
+    {
+      "id": "a-01",
+      "split": "train",
+      "query": "Review whether this PropagationPolicy matches the current Karmada API, separating errors from risks.",
+      "should_trigger": true,
+      "rationale": "Explicit audit of supplied policy."
+    },
+    {
+      "id": "a-02",
+      "split": "train",
+      "query": "Review this ClusterPropagationPolicy for namespace scope, selector breadth, and preemption problems.",
+      "should_trigger": true,
+      "rationale": "Requests semantic risk review of existing YAML."
+    },
+    {
+      "id": "a-03",
+      "split": "train",
+      "query": "Check the attached OverridePolicy against source code to verify that its plaintext path and operator are valid.",
+      "should_trigger": true,
+      "rationale": "Requests override patch audit."
+    },
+    {
+      "id": "a-04",
+      "split": "train",
+      "query": "Audit whether the priority settings will behave as intended when two propagation policies select the same Deployment.",
+      "should_trigger": true,
+      "rationale": "Requests competing-policy and priority analysis."
+    },
+    {
+      "id": "a-05",
+      "split": "train",
+      "query": "This policy claims to spread across three regions. Verify whether its spec actually expresses that intent.",
+      "should_trigger": true,
+      "rationale": "Requests placement-intent audit."
+    },
+    {
+      "id": "a-06",
+      "split": "train",
+      "query": "Audit these PropagationPolicy and ClusterOverridePolicy documents together and list runtime checks you cannot prove offline.",
+      "should_trigger": true,
+      "rationale": "Requests multi-object audit with uncertainty."
+    },
+    {
+      "id": "a-07",
+      "split": "validation",
+      "query": "Does this policy accidentally select every Secret in its namespace? Explain the effective selector and propose a narrow fix.",
+      "should_trigger": true,
+      "rationale": "Requests selector breadth and sensitive-resource audit."
+    },
+    {
+      "id": "a-08",
+      "split": "validation",
+      "query": "Use the current validation code to check whether this combination of failover settings and propagateDeps passes admission.",
+      "should_trigger": true,
+      "rationale": "Requests source-backed admission audit."
+    },
+    {
+      "id": "a-09",
+      "split": "validation",
+      "query": "Review this divided replica policy for incompatible affinity, spread, and weight settings.",
+      "should_trigger": true,
+      "rationale": "Requests placement combination validation."
+    },
+    {
+      "id": "a-10",
+      "split": "validation",
+      "query": "Review the selector and targetCluster separately to verify the claim that this ClusterOverridePolicy applies only to staging clusters.",
+      "should_trigger": true,
+      "rationale": "Requests resource and target scope audit."
+    },
+    {
+      "id": "a-11",
+      "split": "train",
+      "query": "Create a new PropagationPolicy that deploys to member1 and member2.",
+      "should_trigger": false,
+      "rationale": "Near miss: new policy generation belongs to create-policy."
+    },
+    {
+      "id": "a-12",
+      "split": "train",
+      "query": "Explain PropagationPolicy priority and preemption conceptually.",
+      "should_trigger": false,
+      "rationale": "Near miss: domain explanation without supplied policy."
+    },
+    {
+      "id": "a-13",
+      "split": "train",
+      "query": "Analyze the binding events to determine why the scheduler excluded this cluster.",
+      "should_trigger": false,
+      "rationale": "Near miss: observed placement explanation."
+    },
+    {
+      "id": "a-14",
+      "split": "train",
+      "query": "Debug why the resource was not created in the member cluster.",
+      "should_trigger": false,
+      "rationale": "Near miss: runtime propagation debugging."
+    },
+    {
+      "id": "a-15",
+      "split": "train",
+      "query": "Implement support for a new operator in the override validation code.",
+      "should_trigger": false,
+      "rationale": "Near miss: implementation task."
+    },
+    {
+      "id": "a-16",
+      "split": "train",
+      "query": "Perform a security review of this Kubernetes NetworkPolicy YAML.",
+      "should_trigger": false,
+      "rationale": "Near miss: policy audit vocabulary but not Karmada policy APIs."
+    },
+    {
+      "id": "a-17",
+      "split": "validation",
+      "query": "Convert these requirements into Karmada policy YAML.",
+      "should_trigger": false,
+      "rationale": "Near miss: intent-to-YAML creation."
+    },
+    {
+      "id": "a-18",
+      "split": "validation",
+      "query": "Explain the policy validation architecture in the current checkout.",
+      "should_trigger": false,
+      "rationale": "Near miss: architecture explanation rather than object audit."
+    },
+    {
+      "id": "a-20",
+      "split": "validation",
+      "query": "Diagnose the API server failure from the complete logs of a failed kubectl apply.",
+      "should_trigger": false,
+      "rationale": "Near miss: general operational debugging without a policy review request."
+    },
+    {
+      "id": "a-21",
+      "split": "validation",
+      "query": "Explain PropagationPolicy from the beginning. There is no YAML to review.",
+      "should_trigger": false,
+      "rationale": "General explanation belongs to karmada-knowledge, not policy audit."
+    }
+  ]
+}

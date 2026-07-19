@@ -1,0 +1,20 @@
+{
+  "id": "namespaced-basic",
+  "policy": {
+    "kind": "PropagationPolicy",
+    "namespace": "shop",
+    "resourceSelectors": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "checkout"
+      }
+    ],
+    "clusterNames": ["member-east", "member-west"]
+  },
+  "expected": {
+    "valid": true,
+    "findings": [],
+    "warnings": []
+  }
+}

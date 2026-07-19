@@ -1,0 +1,138 @@
+{
+  "skill_name": "karmada-knowledge",
+  "queries": [
+    {
+      "id": "k-01",
+      "split": "train",
+      "query": "Using the current code, explain what ResourceBinding and Work represent in Karmada's propagation object flow.",
+      "should_trigger": true,
+      "rationale": "Requires checkout-based architecture and controller-flow explanation."
+    },
+    {
+      "id": "k-02",
+      "split": "train",
+      "query": "What is the difference between PropagationPolicy and ClusterPropagationPolicy, including scope and selection behavior?",
+      "should_trigger": true,
+      "rationale": "Requests a Karmada API concept comparison."
+    },
+    {
+      "id": "k-03",
+      "split": "train",
+      "query": "From a user's perspective, describe how a policy claims a workload in Karmada and identify the relevant source and test locations.",
+      "should_trigger": true,
+      "rationale": "Requires authoritative implementation and test navigation."
+    },
+    {
+      "id": "k-04",
+      "split": "train",
+      "query": "Does Karmada pull mode change how the control plane reaches member clusters? Explain without relying only on docs.",
+      "should_trigger": true,
+      "rationale": "Requires source-first component behavior reasoning."
+    },
+    {
+      "id": "k-05",
+      "split": "train",
+      "query": "Our service spans multiple clusters in three regions. How should we distinguish region, zone, and cluster metadata when modeling Karmada placement?",
+      "should_trigger": true,
+      "rationale": "Requests multi-region/multi-cluster domain guidance."
+    },
+    {
+      "id": "k-06",
+      "split": "train",
+      "query": "Explain when the Karmada scheduler estimator is involved and how its responsibilities differ from those of the scheduler itself.",
+      "should_trigger": true,
+      "rationale": "Requests Karmada component boundaries."
+    },
+    {
+      "id": "k-07",
+      "split": "validation",
+      "query": "Trace the propagation object flow from a Deployment in the control plane to the resource applied in a member cluster. Cite the relevant packages.",
+      "should_trigger": true,
+      "rationale": "Requires source-backed object-flow tracing."
+    },
+    {
+      "id": "k-08",
+      "split": "validation",
+      "query": "If the priority scheduling guide differs from the current policy API comments, explain which source should govern the interpretation and cite the actual source locations.",
+      "should_trigger": true,
+      "rationale": "Requires source authority and checkout-aware reasoning."
+    },
+    {
+      "id": "k-09",
+      "split": "validation",
+      "query": "How does Karmada's global view concept differ from workload propagation, and when does an operator need to understand that distinction?",
+      "should_trigger": true,
+      "rationale": "General global-view and propagation concept boundaries belong to Karmada knowledge."
+    },
+    {
+      "id": "k-10",
+      "split": "validation",
+      "query": "Compare the concepts and implementation paths of Karmada failover control flow for cluster failures and application failures.",
+      "should_trigger": true,
+      "rationale": "Requires concept comparison tied to implementation."
+    },
+    {
+      "id": "k-11",
+      "split": "train",
+      "query": "Create PropagationPolicy YAML that deploys this Deployment to the us-east and eu-west clusters.",
+      "should_trigger": false,
+      "rationale": "Near miss: policy generation belongs to the focused create-policy workflow."
+    },
+    {
+      "id": "k-12",
+      "split": "train",
+      "query": "Review the attached PropagationPolicy for risky selectors or invalid fields.",
+      "should_trigger": false,
+      "rationale": "Near miss: auditing a supplied policy is a focused audit workflow."
+    },
+    {
+      "id": "k-13",
+      "split": "train",
+      "query": "member1 is absent from the ResourceBinding. Use this cluster snapshot to explain why the scheduler excluded it.",
+      "should_trigger": false,
+      "rationale": "Near miss: explaining one concrete placement result is a focused workflow."
+    },
+    {
+      "id": "k-14",
+      "split": "train",
+      "query": "A Work was created, but the Deployment is missing from the member cluster. Find the cause using this support bundle.",
+      "should_trigger": false,
+      "rationale": "Near miss: concrete propagation debugging is a focused workflow."
+    },
+    {
+      "id": "k-15",
+      "split": "train",
+      "query": "The scheduler code changed in this PR. Update the agent skill knowledge and source map.",
+      "should_trigger": false,
+      "rationale": "Near miss: repository maintenance is outside the runtime knowledge-explanation suite."
+    },
+    {
+      "id": "k-16",
+      "split": "train",
+      "query": "Add a new flag to karmada-controller-manager and write unit tests for it.",
+      "should_trigger": false,
+      "rationale": "Near miss: implementation work is not a domain explanation task."
+    },
+    {
+      "id": "k-17",
+      "split": "validation",
+      "query": "Explain how pod affinity works in the Kubernetes scheduler.",
+      "should_trigger": false,
+      "rationale": "Near miss: shares scheduling vocabulary but is not Karmada-specific."
+    },
+    {
+      "id": "k-18",
+      "split": "validation",
+      "query": "Fix a typo on the Karmada documentation site and create a pull request.",
+      "should_trigger": false,
+      "rationale": "Near miss: documentation editing does not require domain knowledge maintenance."
+    },
+    {
+      "id": "k-19",
+      "split": "validation",
+      "query": "Search all repositories for the string ResourceBinding.",
+      "should_trigger": false,
+      "rationale": "Near miss: simple text search does not need specialized Karmada expertise."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "skill_name": "karmada-controller-manager",
+  "queries": [
+    {"id":"cm-01","split":"train","query":"List the karmada-controller-manager flags and explain each controller's role from an operator's perspective.","should_trigger":true,"rationale":"Controller-manager flags and controller ownership."},
+    {"id":"cm-02","split":"train","query":"The controller-manager is Running, but the clusterStatus controller does not appear to reconcile. Start by checking the --controllers configuration.","should_trigger":true,"rationale":"Controller-manager enablement incident."},
+    {"id":"cm-03","split":"train","query":"The karmada-controller-manager pod keeps restarting. Diagnose it read-only using leader election, probes, and logs.","should_trigger":true,"rationale":"Controller-manager process health incident."},
+    {"id":"cm-04","split":"train","query":"For a Push mode cluster, distinguish whether Work Applied=False is a controller-manager execution problem or an agent problem.","should_trigger":true,"rationale":"Push-mode controller-manager execution boundary."},
+    {"id":"cm-11","split":"train","query":"Explain the node lifecycle controller in kube-controller-manager.","should_trigger":false,"rationale":"Kubernetes component, not Karmada."},
+    {"id":"cm-12","split":"train","query":"Modify the Karmada Search backend controller.","should_trigger":false,"rationale":"Search subsystem."},
+    {"id":"cm-13","split":"train","query":"Create this PropagationPolicy.","should_trigger":false,"rationale":"Policy generation."},
+    {"id":"cm-14","split":"train","query":"A Work is not being applied to a member cluster.","should_trigger":false,"rationale":"Generic propagation incident until controller-manager ownership is isolated."},
+    {"id":"cm-05","split":"validation","query":"The ResourceBinding is scheduled, but no Work exists and the binding controller may be disabled. Investigate from the controller-manager boundary.","should_trigger":true,"rationale":"Controller-manager binding controller boundary."},
+    {"id":"cm-06","split":"validation","query":"The ResourceBinding status is stale while the Work status is current. Check bindingStatus controller logs and enablement.","should_trigger":true,"rationale":"Controller-manager status aggregation boundary."},
+    {"id":"cm-07","split":"validation","query":"Cluster member-a is Ready=Unknown, but no failover taint was added. Diagnose the controller-manager clusterStatus and taint or failover controller boundaries.","should_trigger":true,"rationale":"Controller-manager cluster status and failover boundary."},
+    {"id":"cm-08","split":"validation","query":"I expected the hpaScaleTargetMarker controller to be enabled, but there are no reconciliation logs. Check disabled-by-default behavior and arguments.","should_trigger":true,"rationale":"Disabled-by-default controller enablement."},
+    {"id":"cm-09","split":"validation","query":"Determine whether this controller-manager replica is the leader or a standby and explain why no reconciliation logs appear.","should_trigger":true,"rationale":"Leader election and runtime diagnostic."},
+    {"id":"cm-15","split":"validation","query":"Explain the major components in the Karmada architecture.","should_trigger":false,"rationale":"General knowledge."},
+    {"id":"cm-16","split":"validation","query":"Add a new scheduler plugin.","should_trigger":false,"rationale":"Scheduler-only work."},
+    {"id":"cm-17","split":"validation","query":"The Search APIService is unhealthy.","should_trigger":false,"rationale":"Search operation."},
+    {"id":"cm-18","split":"validation","query":"Explain the selection result in this binding.","should_trigger":false,"rationale":"Placement explanation."},
+    {"id":"cm-20","split":"validation","query":"Add a new controller to Karmada controller-manager, including registration and tests.","should_trigger":true,"rationale":"Controller-manager contributor implementation, registration, and test workflow."},
+    {"id":"cm-22","split":"validation","query":"PropagationPolicy creation is rejected by the admission webhook. Investigate the validation boundary.","should_trigger":false,"rationale":"Admission rejection is webhook territory before controller-manager reconciliation."}
+  ]
+}
