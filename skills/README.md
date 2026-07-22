@@ -22,7 +22,7 @@ A focused workflow does not need to invoke `karmada-knowledge` first.
 
 Install either all seven directories or only the workflows you need. Copy the complete skill
 directory because `SKILL.md` loads package-local `references/` when needed. The `evals/` directory
-is maintainer tooling and must not be installed as a skill.
+is contributor evaluation tooling and must not be installed as a skill.
 
 Inspect an existing destination before copying. `cp -R` merges directories and does not remove
 files deleted by a newer version of a skill.
@@ -83,6 +83,44 @@ Claude can select a skill automatically or invoke one directly:
 
 Restart Claude Code when a newly created top-level skill directory is not discovered. See the
 official [Claude Code skill documentation](https://code.claude.com/docs/en/skills) for details.
+
+### GitHub Copilot CLI
+
+GitHub Copilot CLI discovers personal skills from `$HOME/.copilot/skills` and project skills from
+`.github/skills`, `.agents/skills`, or `.claude/skills`.
+
+Personal installation:
+
+```bash
+mkdir -p "$HOME/.copilot/skills"
+cp -R skills/karmada-* "$HOME/.copilot/skills/"
+```
+
+Project-scoped installation from this community repository:
+
+```bash
+mkdir -p /path/to/karmada/.github/skills
+cp -R skills/karmada-* /path/to/karmada/.github/skills/
+```
+
+Alternatively, register this checkout without copying it:
+
+```bash
+copilot skill add "$(pwd)/skills"
+```
+
+Keep the registered checkout at the same absolute path. Verify discovery with
+`copilot skill list`. Describe the task normally and Copilot will select a relevant skill:
+
+```text
+Explain why this Karmada ResourceBinding selected member-a.
+```
+
+Use `/karmada-explain-placement` only when automatic selection is ambiguous or you want to invoke
+that skill explicitly.
+
+See the official [GitHub Copilot CLI skill documentation](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills)
+for discovery and skill management details.
 
 ## Evidence boundaries
 
