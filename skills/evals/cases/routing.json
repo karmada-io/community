@@ -98,6 +98,12 @@
       "boundary": "historical scheduler outcome versus current policy audit"
     },
     {
+      "id": "route-explain-placement-prose-only",
+      "prompt": "Explain why this ResourceBinding records member-a with 3 replicas from the supplied policy and cluster facts. No binding YAML or scheduler logs are available, so separate what the prose proves from what remains unknown.",
+      "expected_skill": "karmada-explain-placement",
+      "boundary": "partial prose-only placement evidence versus a general scheduling concept"
+    },
+    {
       "id": "route-explain-replica-assignment",
       "prompt": "A ResourceBinding records replicas 7 and 3 on two clusters. Use the supplied estimator response and scheduler logs to explain that observed assignment.",
       "expected_skill": "karmada-explain-placement",

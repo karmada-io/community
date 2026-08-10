@@ -730,6 +730,14 @@ def checkout_commit(root: Path) -> str:
     ).strip()
 
 
+def _hash_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(8192), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def tree_digest(root: Path) -> str:
     digest = hashlib.sha256()
     if not root.exists():
@@ -740,7 +748,7 @@ def tree_digest(root: Path) -> str:
             continue
         digest.update(relative.encode("utf-8"))
         digest.update(b"\0")
-        digest.update(hashlib.sha256(path.read_bytes()).hexdigest().encode("ascii"))
+        digest.update(_hash_file(path).encode("ascii"))
         digest.update(b"\0")
     return digest.hexdigest()
 
@@ -760,7 +768,7 @@ def workspace_fingerprint(workspace: Path) -> str:
             continue
         digest.update(relative.encode("utf-8"))
         digest.update(b"\0")
-        digest.update(hashlib.sha256(path.read_bytes()).hexdigest().encode("ascii"))
+        digest.update(_hash_file(path).encode("ascii"))
         digest.update(b"\0")
     return digest.hexdigest()
 
@@ -1541,6 +1549,10 @@ def main() -> int:
         parser.error("--case-timeout must be positive")
     if args.grader != "none" and args.mode == "trigger":
         parser.error("--grader is valid only for output mode")
+    if shutil.which(args.runner) is None:
+        parser.error(f"runner executable '{args.runner}' not found in PATH")
+    if args.grader != "none" and shutil.which(args.grader) is None:
+        parser.error(f"grader executable '{args.grader}' not found in PATH")
 
     root = args.root.resolve()
     package_dir = args.package_dir.resolve() if args.package_dir else None

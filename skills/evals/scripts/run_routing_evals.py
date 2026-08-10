@@ -7,7 +7,7 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
-from lib.runtime import package_digest, run_condition, skill_package_dirs
+from lib.runtime import USER_SKILLS, package_digest, run_condition, skill_package_dirs
 
 RUNNERS = ("codex", "claude")
 FALLBACK_TARGET = "karmada-knowledge"
@@ -26,7 +26,9 @@ def load_cases(path: Path) -> list:
         if not isinstance(item.get("prompt"), str) or not item["prompt"].strip():
             raise ValueError(f"missing prompt for {case_id}")
         expected = item.get("expected_skill")
-        if expected is not None and not isinstance(expected, str):
+        if expected is not None and (
+            not isinstance(expected, str) or expected not in USER_SKILLS
+        ):
             raise ValueError(f"invalid expected_skill for {case_id}")
         routing = {
             "required_skills": [expected] if expected else [],

@@ -161,6 +161,35 @@ def validate_gate(path: Path) -> list[str]:
     return errors
 
 
+def validate_scenarios(scenario_root: Path) -> list[str]:
+    errors = []
+    if not scenario_root.is_dir():
+        return [f"{scenario_root}: missing scenario directory"]
+    actual_scenarios = {
+        path.name for path in scenario_root.iterdir() if path.is_dir()
+    }
+    if actual_scenarios != set(EVALUATION_SCENARIOS):
+        errors.append(
+            f"{scenario_root}: scenario set mismatch: expected "
+            f"{sorted(EVALUATION_SCENARIOS)}, found {sorted(actual_scenarios)}"
+        )
+    for name in EVALUATION_SCENARIOS:
+        scenario = scenario_root / name
+        if not scenario.is_dir():
+            errors.append(f"{scenario}: missing scenario directory")
+            continue
+        files = {path.name for path in scenario.iterdir() if path.is_file()}
+        if files != {"README.md", "input.json"}:
+            errors.append(
+                f"{scenario}: expected README.md and input.json, found {sorted(files)}"
+            )
+        data, json_errors = load_json(scenario / "input.json")
+        errors.extend(json_errors)
+        if not json_errors and not isinstance(data.get("expected"), dict):
+            errors.append(f"{scenario / 'input.json'}: expected result is required")
+    return errors
+
+
 def main() -> int:
     errors = []
     for legacy in ("examples", "fixtures", "scripts"):
@@ -202,24 +231,7 @@ def main() -> int:
         _, json_errors = load_json(path)
         errors.extend(json_errors)
 
-    scenario_root = evals / "scenarios"
-    actual_scenarios = {path.name for path in scenario_root.iterdir() if path.is_dir()}
-    if actual_scenarios != set(EVALUATION_SCENARIOS):
-        errors.append(
-            f"{scenario_root}: scenario set mismatch: expected "
-            f"{sorted(EVALUATION_SCENARIOS)}, found {sorted(actual_scenarios)}"
-        )
-    for name in EVALUATION_SCENARIOS:
-        scenario = scenario_root / name
-        files = {path.name for path in scenario.iterdir() if path.is_file()}
-        if files != {"README.md", "input.json"}:
-            errors.append(
-                f"{scenario}: expected README.md and input.json, found {sorted(files)}"
-            )
-        data, json_errors = load_json(scenario / "input.json")
-        errors.extend(json_errors)
-        if not json_errors and not isinstance(data.get("expected"), dict):
-            errors.append(f"{scenario / 'input.json'}: expected result is required")
+    errors.extend(validate_scenarios(evals / "scenarios"))
 
     errors.extend(validate_package_only_output(cases / "output.json"))
     errors.extend(validate_gate(evals / "gate.json"))

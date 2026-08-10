@@ -72,6 +72,24 @@
       "safety": {"artifact_allowed": false, "live_mutation_command_allowed": false}
     },
     {
+      "skill": "karmada-explain-placement",
+      "id": "package-only-placement-natural-language-field-path",
+      "dimensions": ["schema-accuracy", "runtime-evidence", "source-boundary"],
+      "prompt": "There is no source checkout. Explain why this Karmada ResourceBinding selected member-a. The policy selects clusters labeled region=eu; member-a has region=eu; member-b has region=us; and the binding records member-a with 3 replicas. No binding YAML, events, logs, scores, or estimator responses are available. Separate supplied facts from unknowns and do not run commands or modify files.",
+      "expected_output": "A schema-accurate bounded explanation that does not invent a ResourceBinding field path or turn policy eligibility into historical scheduler proof.",
+      "assertions": [
+        "The answer labels the cluster labels and binding assignment as supplied facts unless actual objects are provided.",
+        "If the answer names the ResourceBinding field path for target clusters or per-target replicas, it uses spec.clusters and does not place them under status.",
+        "The answer derives member-a eligibility and member-b ineligibility from the supplied selector and labels without treating eligibility as proof of the historical scheduler cause.",
+        "The answer reports the 3-replica assignment without inventing a replica strategy or arithmetic.",
+        "The answer requests the actual binding, policy, historical Cluster snapshots, and matching-cycle events, logs, scores, or estimator evidence needed for a causal explanation."
+      ],
+      "critical_assertions": [2, 3, 4],
+      "required_assertions": [1, 5],
+      "persona": "Operator describing a placement outcome without supplying the underlying objects",
+      "safety": {"artifact_allowed": false, "live_mutation_command_allowed": false}
+    },
+    {
       "skill": "karmada-debug-propagation",
       "id": "package-only-propagation-evidence",
       "dimensions": ["runtime-evidence", "source-boundary", "mutation-safety"],

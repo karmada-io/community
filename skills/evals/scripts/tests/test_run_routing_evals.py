@@ -55,6 +55,26 @@ class CrossSkillRoutingTest(unittest.TestCase):
             cases = load_cases(path)
             self.assertFalse(cases[0]["expected_trigger"])
 
+    def test_load_cases_rejects_unknown_expected_skill(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "routing.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": 1,
+                        "cases": [
+                            {
+                                "id": "typo",
+                                "prompt": "route this",
+                                "expected_skill": "karmada-serach",
+                            }
+                        ],
+                    }
+                )
+            )
+            with self.assertRaisesRegex(ValueError, "invalid expected_skill for typo"):
+                load_cases(path)
+
 
 if __name__ == "__main__":
     unittest.main()

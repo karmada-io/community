@@ -1,6 +1,6 @@
 ---
 name: karmada-explain-placement
-description: Use this skill when a Karmada user, operator, or platform engineer asks why a concrete ResourceBinding or ClusterResourceBinding selected, rejected, ordered, or assigned replicas to specific member clusters. Use it for observed placement outcomes with supplied policy, binding, Cluster, event, log, or estimator evidence. Do not use it for policy creation, static YAML audit, general scheduling concepts, post-scheduling Work/member failures, live mutations, or knowledge maintenance.
+description: Use this skill when a Karmada user, operator, or platform engineer asks why a concrete ResourceBinding or ClusterResourceBinding selected, rejected, ordered, or assigned replicas to specific member clusters. Use it for observed placement outcomes from full or partial evidence, including prose descriptions when binding YAML or runtime logs are unavailable; in partial cases bound conclusions and request the missing objects. Do not use it for policy creation, static YAML audit, general scheduling concepts, post-scheduling Work/member failures, live mutations, or knowledge maintenance.
 ---
 
 # Explain Karmada Placement
@@ -22,6 +22,9 @@ This is a read-only diagnostic workflow for placement outcomes, not a remediatio
 2. Identify the exact object under explanation: `ResourceBinding` or `ClusterResourceBinding`,
    namespace/name, UID, generation, referenced workload, applied policy placement annotation or
    policy generation, scheduler name if present, conditions, events, and `status.lastScheduledTime`.
+   Selected target names and per-target replica counts belong to `spec.clusters[]`, not `status`.
+   When the user supplies only a prose description, call it a supplied binding fact and do not
+   invent a `spec` or `status` field path.
 3. Separate deterministic policy interpretation from runtime state:
    - Deterministic: placement fields, selectors, explicit cluster names, excluded clusters,
      `clusterAffinities` order, toleration rules, spread declarations, and replica scheduling API
@@ -74,9 +77,16 @@ This is a read-only diagnostic workflow for placement outcomes, not a remediatio
   filtering, spread selection, estimator-based assignment, or status patching.
 - If the binding, historical Cluster snapshot, scheduler events/logs, or estimator data is missing,
   stop with a partial explanation and ask for the exact read-only evidence needed.
+- For prose-only evidence, end with an explicit request for the actual binding and policy YAML,
+  historical Cluster snapshot, and matching-cycle events, logs, scores, or estimator output needed
+  to close the causal gap. Listing those categories as unknowns alone is not sufficient.
 
 ## Guardrails
 
+- `ResourceBinding` and `ClusterResourceBinding` target assignments are stored in
+  `spec.clusters[]`. Their `status` contains scheduler observation metadata, conditions, and
+  aggregated workload status, not the selected target list. Never report target names or target
+  replica counts as fields under `status`.
 - A current Cluster list may not represent the snapshot used by an earlier scheduling cycle.
 - The scheduler does not universally pre-filter all non-Ready clusters. Readiness matters only when
   it appears in supplied evidence or in the specific scheduler/plugin path being cited.

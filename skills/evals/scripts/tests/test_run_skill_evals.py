@@ -21,11 +21,13 @@ from lib.runtime import (
     normalize_evaluation_paths,
     result_metadata,
     run_case,
+    main as run_eval_main,
     scan_safety_violations,
     selected_cases,
     parse_trace,
     write_condition_report,
     write_result_bundle,
+    tree_digest,
     workspace_fingerprint,
 )
 
@@ -69,6 +71,44 @@ class RunCodexEvalsTest(unittest.TestCase):
             self.assertEqual(first, workspace_fingerprint(root))
             source.write_text("changed", encoding="utf-8")
             self.assertNotEqual(first, workspace_fingerprint(root))
+
+    def test_tree_digest_streams_file_content(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "large.bin").write_bytes(b"content" * 4096)
+            with mock.patch.object(
+                Path, "read_bytes", side_effect=AssertionError("read_bytes called")
+            ):
+                self.assertTrue(tree_digest(root))
+
+    def test_main_rejects_missing_runner_executable(self):
+        argv = ["run_skill_evals.py", "--output", "/tmp/results"]
+        with mock.patch("sys.argv", argv), mock.patch(
+            "lib.runtime.shutil.which", return_value=None
+        ), mock.patch("sys.stderr") as stderr:
+            with self.assertRaises(SystemExit):
+                run_eval_main()
+            self.assertIn("runner executable 'codex' not found", str(stderr.mock_calls))
+
+    def test_main_rejects_missing_grader_executable(self):
+        argv = [
+            "run_skill_evals.py",
+            "--output",
+            "/tmp/results",
+            "--mode",
+            "output",
+            "--condition",
+            "baseline",
+            "--grader",
+            "claude",
+        ]
+        with mock.patch("sys.argv", argv), mock.patch(
+            "lib.runtime.shutil.which",
+            side_effect=lambda executable: "/bin/codex" if executable == "codex" else None,
+        ), mock.patch("sys.stderr") as stderr:
+            with self.assertRaises(SystemExit):
+                run_eval_main()
+            self.assertIn("grader executable 'claude' not found", str(stderr.mock_calls))
 
     def write_package(self, package_dir: Path, skill: str, text: str = None) -> Path:
         source_text = text or f"{skill} package"
@@ -386,6 +426,24 @@ class RunCodexEvalsTest(unittest.TestCase):
         cases = selected_cases(suite, "output", profile="package-only")
         self.assertEqual(set(USER_SKILLS), {case["skill"] for case in cases})
         self.assertTrue(all("critical_assertions" in case for case in cases))
+
+    def test_placement_natural_language_case_guards_binding_field_path(self):
+        suite = Path(__file__).resolve().parents[3]
+        cases = selected_cases(
+            suite,
+            "output",
+            skills=("karmada-explain-placement",),
+            profile="package-only",
+        )
+        case = next(
+            item
+            for item in cases
+            if item["id"] == "package-only-placement-natural-language-field-path"
+        )
+        field_assertion = case["assertions"][1]
+        self.assertIn("spec.clusters", field_assertion)
+        self.assertIn("status", field_assertion)
+        self.assertIn(2, case["critical_assertions"])
 
     def test_codex_workspace_keeps_checkout_separate_from_packages(self):
         with tempfile.TemporaryDirectory() as temp:

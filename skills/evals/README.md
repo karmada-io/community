@@ -3,31 +3,57 @@
 This directory contains all non-runtime material used to develop and evaluate the seven Karmada
 skills. Nothing under `evals/` is installed with a runtime skill.
 
-## Evaluation model
+## Evaluation design
+
+An Agent Skill can fail in independent ways: its package can be invalid, the model can select the
+wrong skill, or the selected skill can produce an incorrect or unsafe answer. A single score would
+hide which failure occurred. This suite therefore evaluates package integrity, routing, and output
+quality separately before combining the required results in a release gate.
 
 ```mermaid
 flowchart TD
+    trigger["Trigger corpus"] --> tuning["Description tuning"]
     deterministic["Deterministic validation"] --> gate["Automated release gate"]
     routing["Core routing"] --> gate
     output["Package-only output evaluation"] --> gate
     gate --> review["Human review of reports and raw traces"]
 ```
 
-| Surface | Question answered |
+| Surface | Question answered | Why it remains separate |
+| --- | --- | --- |
+| Deterministic | Are packages, cases, scenarios, and helper contracts structurally valid? | It catches reproducible errors without model variability, but does not measure routing or answer quality. |
+| Trigger corpus | Should one named skill activate for a positive or near-miss request? | It provides a broad diagnostic set for tuning descriptions and does not duplicate the smaller release-gated routing corpus. |
+| Core routing | Does a request select the correct Karmada skill and avoid adjacent skills? | It tests automatic selection across all seven skills without treating a well-written answer as evidence of correct routing. |
+| Output evaluation | Does an explicitly selected skill produce useful, correct, and safe package-only output? | Explicit selection isolates skill behavior so a routing failure cannot hide output quality. |
+| Release gate | Do all required reports satisfy the configured coverage, correctness, and safety thresholds? | It aggregates results without replacing their distinct failure signals. |
+| Human review | Are the cases, assertions, representative outputs, and residual risks acceptable? | Automated scores cannot establish that the evaluation contract itself is complete or meaningful. |
+
+Model runs are isolated and repeated because routing and output are nondeterministic. Output grading
+uses deterministic safety checks where possible and a separate blind model grader for semantic
+assertions. The runners also support baseline and with-skill conditions so a change can measure
+whether a skill improves quality or only adds cost. Baseline comparison is optional unless the
+change makes an improvement claim.
+
+The package-only profile evaluates the seven installed skill directories without a Karmada source
+checkout. It tests whether the packaged guidance remains useful while respecting source and runtime
+evidence boundaries. It does not run Karmada decoding, admission, scheduler plugins, controller
+reconciliation, or a live member cluster.
+
+## Evaluation inputs
+
+The checked-in inputs define the evaluation contract; the scripts execute it and write reports.
+
+| Input | Role |
 | --- | --- |
-| Deterministic | Are packages, cases, scenarios, and helper contracts structurally valid? |
-| Trigger corpus | Should one named skill activate for a positive or near-miss request? |
-| Core routing | Does a request select the correct Karmada skill and avoid adjacent skills? |
-| Output evaluation | Does an explicitly selected skill produce useful, correct, and safe package-only output? |
-| Release gate | Do all required machine-readable results satisfy the configured thresholds? |
-| Human review | Do maintainers accept the cases, assertions, representative outputs, and residual risks? |
+| `gate.json` | Required result sections, execution coverage, thresholds, and token warnings. |
+| `cases/trigger/*.json` | Positive and adjacent near-miss prompts used to tune each skill description. |
+| `cases/routing.json` | Cross-skill requests and their expected single-skill route, including requests that should select none. |
+| `cases/output.json` | Package-only prompts, expected behavior, graded assertions, severity, and deterministic safety policy. |
+| `scenarios/*/input.json` | Inputs and expected results for bounded deterministic helpers. |
 
-Trigger and routing evaluation are separate from output evaluation. A skill can route correctly and
-still produce a poor answer, or produce a good answer only when explicitly selected while routing
-incorrectly.
-
-Deterministic scenario helpers check narrow suite invariants. They do not run Karmada decoding,
-admission, scheduler plugins, controller reconciliation, or a live member cluster.
+Changing a skill's activation boundary requires corresponding routing evidence. Changing behavioral
+instructions requires output assertions that describe observable results rather than exact prose.
+Changing a helper or gate requires tests for the evaluation machinery itself.
 
 ## Directory layout
 
