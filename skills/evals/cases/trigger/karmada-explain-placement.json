@@ -1,0 +1,22 @@
+{
+  "skill_name": "karmada-explain-placement",
+  "queries": [
+    {"id":"ep-01","split":"train","query":"Use the policy and Cluster snapshot to explain why this ResourceBinding selected only member-a.","should_trigger":true,"rationale":"Concrete observed binding placement."},
+    {"id":"ep-02","split":"train","query":"Explain why member-b was filtered from this ClusterResourceBinding scheduling result.","should_trigger":true,"rationale":"Concrete rejected cluster explanation."},
+    {"id":"ep-03","split":"train","query":"Investigate which runtime evidence explains this binding's 6:4 replica assignment and how far we can reason without estimator results.","should_trigger":true,"rationale":"Observed replica assignment with an explicit evidence boundary."},
+    {"id":"ep-04","split":"train","query":"Compare the policy candidates with the clusters actually recorded in ResourceBinding.spec.clusters.","should_trigger":true,"rationale":"Eligibility versus observed result."},
+    {"id":"ep-19","split":"train","query":"Explain why this ResourceBinding records member-a with 3 replicas from the supplied policy and cluster facts. I have no binding YAML or scheduler logs, so separate what the prose proves from what remains unknown.","should_trigger":true,"rationale":"Concrete placement outcome described with partial prose-only evidence."},
+    {"id":"ep-11","split":"train","query":"Create a PropagationPolicy that deploys to two clusters in us-east.","should_trigger":false,"rationale":"Policy generation belongs to create-policy."},
+    {"id":"ep-12","split":"train","query":"Audit whether this PropagationPolicy selector is too broad.","should_trigger":false,"rationale":"Static review belongs to audit-policy."},
+    {"id":"ep-13","split":"train","query":"Explain the general difference between a ResourceBinding and a Work.","should_trigger":false,"rationale":"General concept belongs to knowledge."},
+    {"id":"ep-14","split":"train","query":"The binding is scheduled, but no Work was created. Debug the cause.","should_trigger":false,"rationale":"Post-scheduling incident belongs to debug-propagation."},
+    {"id":"ep-05","split":"validation","query":"Given policy, Cluster objects, scheduler conditions, and binding state, reconstruct what is observed and what remains unknown.","should_trigger":true,"rationale":"Evidence-scoped placement reconstruction."},
+    {"id":"ep-06","split":"validation","query":"member-jp appears to be a candidate in the current snapshot but is absent from the final binding. Trace why using current scheduler code and evidence without hallucinating.","should_trigger":true,"rationale":"Concrete scheduler decision with missing-evidence handling."},
+    {"id":"ep-07","split":"validation","query":"Using this binding, explain why the spread constraint resulted in two regions instead of three.","should_trigger":true,"rationale":"Observed spread result."},
+    {"id":"ep-08","split":"validation","query":"Explain this divided scheduling result without inventing missing estimator responses.","should_trigger":true,"rationale":"Observed replica scheduling with evidence boundary."},
+    {"id":"ep-15","split":"validation","query":"Explain the concept of spread constraints in the Karmada scheduler.","should_trigger":false,"rationale":"General explanation belongs to knowledge."},
+    {"id":"ep-16","split":"validation","query":"Fix this cluster-label placement YAML and apply it immediately.","should_trigger":false,"rationale":"Policy revision and live mutation do not belong to placement explanation."},
+    {"id":"ep-17","split":"validation","query":"The member cluster has no Deployment and the Work is Applied=False.","should_trigger":false,"rationale":"Execution incident belongs to debug-propagation."},
+    {"id":"ep-18","split":"validation","query":"A specific cluster resource is missing from Karmada Search.","should_trigger":false,"rationale":"Search incident belongs to karmada-search."}
+  ]
+}

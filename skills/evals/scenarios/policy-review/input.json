@@ -1,0 +1,21 @@
+{
+  "id": "preemption-broad",
+  "policy": {
+    "kind": "PropagationPolicy",
+    "namespace": "default",
+    "preemption": "Always",
+    "resourceSelectors": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment"
+      }
+    ]
+  },
+  "expected": {
+    "valid": false,
+    "findings": [
+      "spec.resourceSelectors[0].name: required with preemption Always"
+    ],
+    "warnings": []
+  }
+}

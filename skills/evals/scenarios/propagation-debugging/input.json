@@ -1,0 +1,14 @@
+{
+  "id": "missing-work",
+  "evidence": {
+    "policyClaim": "ok",
+    "binding": "ok",
+    "scheduling": "ok",
+    "work": "missing"
+  },
+  "expected": {
+    "firstProblemStage": "work",
+    "state": "missing",
+    "checkedStages": ["policyClaim", "binding", "scheduling", "work"]
+  }
+}

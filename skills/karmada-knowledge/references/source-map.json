@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "topics": {
+    "cluster-management": {
+      "checkoutSources": [
+        "pkg/apis/cluster",
+        "pkg/controllers/cluster",
+        "cmd/agent",
+        "pkg/karmadactl"
+      ]
+    },
+    "components": {
+      "checkoutSources": [
+        "cmd",
+        "pkg/controllers",
+        "pkg/search",
+        "pkg/scheduler",
+        "pkg/estimator",
+        "docs/command-line-flags"
+      ]
+    },
+    "controller-manager": {
+      "checkoutSources": [
+        "cmd/controller-manager/app/controllermanager.go",
+        "cmd/controller-manager/app/options",
+        "pkg/controllers",
+        "artifacts/deploy/karmada-controller-manager.yaml"
+      ]
+    },
+    "core-concepts": {
+      "checkoutSources": [
+        "pkg/apis/policy/v1alpha1",
+        "pkg/apis/work/v1alpha1",
+        "pkg/apis/work/v1alpha2"
+      ]
+    },
+    "failover": {
+      "checkoutSources": [
+        "pkg/controllers/cluster",
+        "pkg/controllers/applicationfailover",
+        "pkg/controllers/binding",
+        "pkg/apis/work/v1alpha2",
+        "test/e2e/suites/base"
+      ]
+    },
+    "global-view": {
+      "checkoutSources": [
+        "pkg/apis/search",
+        "pkg/search",
+        "cmd/karmada-search",
+        "pkg/aggregatedapiserver"
+      ]
+    },
+    "override-policy": {
+      "checkoutSources": [
+        "pkg/apis/policy/v1alpha1/override_types.go",
+        "pkg/util/overridemanager",
+        "pkg/webhook/overridepolicy",
+        "pkg/webhook/clusteroverridepolicy",
+        "test/e2e/suites/base",
+        "pkg/util/validation/validation.go"
+      ]
+    },
+    "placement": {
+      "checkoutSources": [
+        "pkg/apis/policy/v1alpha1/propagation_types.go",
+        "pkg/scheduler",
+        "pkg/estimator",
+        "test/e2e/suites/base",
+        "pkg/util/validation/validation.go"
+      ]
+    },
+    "propagation-policy": {
+      "checkoutSources": [
+        "pkg/apis/policy/v1alpha1/propagation_types.go",
+        "pkg/controllers/binding",
+        "pkg/scheduler",
+        "test/e2e",
+        "pkg/webhook/propagationpolicy",
+        "pkg/webhook/clusterpropagationpolicy",
+        "pkg/util/validation/validation.go"
+      ]
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "route-knowledge-object-flow",
+      "prompt": "Explain the general Karmada object flow from PropagationPolicy claim through ResourceBinding and Work, without diagnosing a live incident.",
+      "expected_skill": "karmada-knowledge",
+      "boundary": "general architecture versus propagation incident"
+    },
+    {
+      "id": "route-create-policy",
+      "prompt": "Create a namespaced PropagationPolicy for Deployment shop/checkout targeting clusters labeled region=eu-west.",
+      "expected_skill": "karmada-create-policy",
+      "boundary": "new policy intent versus policy audit"
+    },
+    {
+      "id": "route-audit-policy",
+      "prompt": "Review this existing PropagationPolicy YAML for invalid fields, selector scope, and placement risks: apiVersion: policy.karmada.io/v1alpha1, kind: PropagationPolicy, metadata: {name: checkout, namespace: shop}, spec: {resourceSelectors: [{apiVersion: apps/v1, kind: Deployment, name: checkout}]}.",
+      "expected_skill": "karmada-audit-policy",
+      "boundary": "supplied policy review versus policy creation"
+    },
+    {
+      "id": "route-explain-placement",
+      "prompt": "This ResourceBinding selected member-a but excluded member-b. Given the binding, policy, and Cluster snapshots, explain the observed scheduler decision and replica assignment.",
+      "expected_skill": "karmada-explain-placement",
+      "boundary": "observed scheduler outcome versus post-scheduling failure"
+    },
+    {
+      "id": "route-debug-propagation",
+      "prompt": "The ResourceBinding already selects member-a and its Work exists, but Deployment shop/checkout is missing from member-a. Trace the first failing propagation stage from the supplied Work conditions and events.",
+      "expected_skill": "karmada-debug-propagation",
+      "boundary": "post-scheduling propagation failure versus placement explanation"
+    },
+    {
+      "id": "route-controller-manager",
+      "prompt": "karmada-controller-manager starts successfully but the clusterStatus controller is not registered. Trace its enablement flag, controller registration, RBAC, and tests in this checkout.",
+      "expected_skill": "karmada-controller-manager",
+      "boundary": "explicit controller-manager ownership versus generic propagation"
+    },
+    {
+      "id": "route-search",
+      "prompt": "Karmada Search returns no Deployments although its APIService is Available. Diagnose ResourceRegistry scope, search storage, cache backend, and proxy boundaries.",
+      "expected_skill": "karmada-search",
+      "boundary": "Search API diagnosis versus repository search or propagation"
+    },
+    {
+      "id": "route-knowledge-multiregion",
+      "prompt": "Explain how Karmada models region, zones, provider, and organization country labels for a multi-country cluster fleet. Do not generate policy YAML.",
+      "expected_skill": "karmada-knowledge",
+      "boundary": "domain modeling explanation versus policy generation"
+    },
+    {
+      "id": "route-debug-not-controller",
+      "prompt": "A Work exists in the pull-mode member namespace and reports SyncFailed. Identify the failing propagation stage from the Work and member-agent evidence; no controller-manager process symptom is known.",
+      "expected_skill": "karmada-debug-propagation",
+      "boundary": "generic pull-mode incident versus controller-manager ownership"
+    },
+    {
+      "id": "route-none-kubernetes",
+      "prompt": "Explain Kubernetes Pod affinity and topology spread constraints without discussing Karmada.",
+      "expected_skill": null,
+      "boundary": "shared Kubernetes vocabulary versus Karmada domain"
+    },
+    {
+      "id": "route-knowledge-policy-priority-concept",
+      "prompt": "Explain conceptually how Karmada policy priority and preemption relate. Do not review or create a concrete policy.",
+      "expected_skill": "karmada-knowledge",
+      "boundary": "general policy semantics versus static policy audit"
+    },
+    {
+      "id": "route-create-override-policy",
+      "prompt": "Generate an OverridePolicy that adds annotation release=canary to Deployment team-a/web only on member-canary.",
+      "expected_skill": "karmada-create-policy",
+      "boundary": "new override artifact versus review of supplied YAML"
+    },
+    {
+      "id": "route-create-change-placement",
+      "prompt": "Change this existing PropagationPolicy placement to target the supplied cluster label env=prod and return corrected YAML; do not audit unrelated fields.",
+      "expected_skill": "karmada-create-policy",
+      "boundary": "explicit requested policy field change versus broad audit"
+    },
+    {
+      "id": "route-audit-override-scope",
+      "prompt": "Audit the supplied OverridePolicy for cross-namespace selector errors and override blast radius. Do not generate a replacement unless the finding is unambiguous.",
+      "expected_skill": "karmada-audit-policy",
+      "boundary": "static override review versus new override creation"
+    },
+    {
+      "id": "route-audit-runtime-limit",
+      "prompt": "Review this existing divided-replica policy and state which schema findings are confirmed and which placement outcomes need runtime evidence.",
+      "expected_skill": "karmada-audit-policy",
+      "boundary": "policy semantics review versus explaining one observed binding"
+    },
+    {
+      "id": "route-explain-placement-history",
+      "prompt": "Yesterday's ResourceBinding selected member-a, but today's Cluster labels no longer match. Explain only what the historical placement evidence proves.",
+      "expected_skill": "karmada-explain-placement",
+      "boundary": "historical scheduler outcome versus current policy audit"
+    },
+    {
+      "id": "route-explain-placement-prose-only",
+      "prompt": "Explain why this ResourceBinding records member-a with 3 replicas from the supplied policy and cluster facts. No binding YAML or scheduler logs are available, so separate what the prose proves from what remains unknown.",
+      "expected_skill": "karmada-explain-placement",
+      "boundary": "partial prose-only placement evidence versus a general scheduling concept"
+    },
+    {
+      "id": "route-explain-replica-assignment",
+      "prompt": "A ResourceBinding records replicas 7 and 3 on two clusters. Use the supplied estimator response and scheduler logs to explain that observed assignment.",
+      "expected_skill": "karmada-explain-placement",
+      "boundary": "observed scheduler arithmetic versus propagation execution"
+    },
+    {
+      "id": "route-debug-missing-work",
+      "prompt": "The binding selects member-a but no Work appears in the expected execution namespace. Trace claim, binding, Work generation, and controller evidence.",
+      "expected_skill": "karmada-debug-propagation",
+      "boundary": "propagation pipeline incident versus scheduler selection reason"
+    },
+    {
+      "id": "route-controller-push-execution",
+      "prompt": "A Push-mode Work has Applied=False. Inspect controller-manager execution and workStatus ownership, registration, and read-only evidence.",
+      "expected_skill": "karmada-controller-manager",
+      "boundary": "explicit Push execution controller ownership versus generic propagation triage"
+    },
+    {
+      "id": "route-controller-failover-registration",
+      "prompt": "Trace how applicationFailover and gracefulEviction controllers are registered and enabled in karmada-controller-manager in this checkout.",
+      "expected_skill": "karmada-controller-manager",
+      "boundary": "controller registration implementation versus failover concept explanation"
+    },
+    {
+      "id": "route-search-proxy-write-boundary",
+      "prompt": "Karmada Search proxying returns 404 for Pods. Diagnose APIService, ResourceRegistry registration, proxy routing, and safe read-only checks.",
+      "expected_skill": "karmada-search",
+      "boundary": "Search proxy operation versus member workload propagation"
+    },
+    {
+      "id": "route-search-backend-change",
+      "prompt": "Implement a checkout-local change to Karmada Search OpenSearch storage while preserving the default cache path and focused tests.",
+      "expected_skill": "karmada-search",
+      "boundary": "Search backend implementation versus generic repository search"
+    },
+    {
+      "id": "route-none-local-code-search",
+      "prompt": "Search this repository for every call to NewController and summarize the matches. This is a local code-search task, not Karmada Search.",
+      "expected_skill": null,
+      "boundary": "local source search versus karmada-search service"
+    },
+    {
+      "id": "route-none-external-inventory",
+      "prompt": "List the accounts and regions in the supplied infrastructure inventory without creating or diagnosing Karmada resources.",
+      "expected_skill": null,
+      "boundary": "external inventory task versus Karmada cluster management"
+    }
+  ]
+}

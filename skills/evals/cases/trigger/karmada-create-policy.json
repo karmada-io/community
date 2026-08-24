@@ -1,0 +1,145 @@
+{
+  "skill_name": "karmada-create-policy",
+  "queries": [
+    {
+      "id": "c-01",
+      "split": "train",
+      "query": "Create a PropagationPolicy that propagates the nginx Deployment in the default namespace to member1 and member2.",
+      "should_trigger": true,
+      "rationale": "Explicit policy generation from workload and cluster intent."
+    },
+    {
+      "id": "c-02",
+      "split": "train",
+      "query": "Generate a ClusterPropagationPolicy that selects Deployments labeled app=payments in namespace prod and targets clusters with region=us-east.",
+      "should_trigger": true,
+      "rationale": "Requests cluster-scoped propagation YAML from explicit intent."
+    },
+    {
+      "id": "c-03",
+      "split": "train",
+      "query": "Write an example Karmada policy that replicates to exactly two of three regions and one cluster in each selected region. Ask me for any unknown labels.",
+      "should_trigger": true,
+      "rationale": "Requests multi-region placement policy generation with guarded assumptions."
+    },
+    {
+      "id": "c-04",
+      "split": "train",
+      "query": "Create a PropagationPolicy that divides 12 replicas between member-a and member-b with static weights 1:2.",
+      "should_trigger": true,
+      "rationale": "Requests replica scheduling policy creation."
+    },
+    {
+      "id": "c-05",
+      "split": "train",
+      "query": "Write an OverridePolicy that changes the Deployment image registry only on member-eu, together with the required propagation policy.",
+      "should_trigger": true,
+      "rationale": "Requests coordinated propagation and per-cluster override objects."
+    },
+    {
+      "id": "c-06",
+      "split": "train",
+      "query": "Decide whether this workload intent should use a namespaced policy or a ClusterPropagationPolicy, then generate the YAML.",
+      "should_trigger": true,
+      "rationale": "Requires scope selection followed by policy generation."
+    },
+    {
+      "id": "c-07",
+      "split": "validation",
+      "query": "Write Karmada YAML to propagate a Deployment and its referenced ConfigMaps and Secrets, but do not enable failover.",
+      "should_trigger": true,
+      "rationale": "Requests creation with explicit dependency behavior and exclusion."
+    },
+    {
+      "id": "c-21",
+      "split": "validation",
+      "query": "I do not yet know which cluster should host the api Deployment in the prod namespace. What should you ask before drafting a safe Karmada policy?",
+      "should_trigger": true,
+      "rationale": "Policy creation workflow must ask for placement inputs before generating scope-changing YAML."
+    },
+    {
+      "id": "c-09",
+      "split": "validation",
+      "query": "Create a ClusterOverridePolicy that adds an annotation to one named Deployment in namespace team-a only on clusters labeled environment=staging.",
+      "should_trigger": true,
+      "rationale": "Requests scoped cluster override generation."
+    },
+    {
+      "id": "c-10",
+      "split": "validation",
+      "query": "Create a Karmada propagation policy that adopts an existing member resource by overwriting it. Explain the risks and how to perform a dry run.",
+      "should_trigger": true,
+      "rationale": "Requests policy generation with explicit conflict behavior and safety notes."
+    },
+    {
+      "id": "c-11",
+      "split": "train",
+      "query": "Find invalid fields and risky selectors in this PropagationPolicy YAML.",
+      "should_trigger": false,
+      "rationale": "Near miss: supplied-policy review belongs to audit-policy."
+    },
+    {
+      "id": "c-12",
+      "split": "train",
+      "query": "Use this cluster snapshot to explain why member2 was not selected in this ResourceBinding.",
+      "should_trigger": false,
+      "rationale": "Near miss: concrete placement explanation."
+    },
+    {
+      "id": "c-13",
+      "split": "train",
+      "query": "Investigate in the live cluster why propagation is failing to create a Work.",
+      "should_trigger": false,
+      "rationale": "Near miss: runtime propagation debugging."
+    },
+    {
+      "id": "c-14",
+      "split": "train",
+      "query": "Explain the difference between PropagationPolicy and ClusterPropagationPolicy.",
+      "should_trigger": false,
+      "rationale": "Near miss: conceptual explanation without generation."
+    },
+    {
+      "id": "c-15",
+      "split": "train",
+      "query": "Update the agent skill knowledge to include the new policy API field.",
+      "should_trigger": false,
+      "rationale": "Near miss: knowledge maintenance."
+    },
+    {
+      "id": "c-16",
+      "split": "train",
+      "query": "Create Kubernetes Deployment YAML.",
+      "should_trigger": false,
+      "rationale": "Near miss: YAML generation, but not a Karmada policy."
+    },
+    {
+      "id": "c-17",
+      "split": "validation",
+      "query": "Review this existing OverridePolicy for changes that would make it safer.",
+      "should_trigger": false,
+      "rationale": "Near miss: audit and correction of supplied policy."
+    },
+    {
+      "id": "c-18",
+      "split": "validation",
+      "query": "List the PropagationPolicies currently applied to the cluster.",
+      "should_trigger": false,
+      "rationale": "Near miss: operational lookup, not generation."
+    },
+    {
+      "id": "c-19",
+      "split": "validation",
+      "query": "Change the spread constraint implementation in the Karmada scheduler.",
+      "should_trigger": false,
+      "rationale": "Near miss: code implementation task."
+    },
+    {
+      "id": "c-22",
+      "split": "validation",
+      "query": "Explain why member-a was selected in an existing ResourceBinding.",
+      "should_trigger": false,
+      "rationale": "Observed placement belongs to explain-placement."
+    }
+  ]
+}
