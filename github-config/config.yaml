@@ -21,6 +21,7 @@ teams:
   - yangsoon # RedNote
   - zach593 # Trip.com Group
   - ZhengXinwei-F # SenseTime
+  - zhy76 # Alibaba's Qwen App
 - name: karmada-maintainers
   maintainers:
   - kevin-wangzefeng
