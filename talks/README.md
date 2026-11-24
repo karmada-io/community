@@ -29,6 +29,8 @@
 | KubeCon EU 2026 Amsterdam           | [Achieving Resilient Multi-Cluster AI Inference on Kubernetes With Karmada and KubeRay](https://youtu.be/SEBoBbyUdz0?si=4wpOKUyeS5HTEcg2)                       | Wei-Cheng Lai, Han-Ju Chen                                  |
 | KubeCon EU 2026 Amsterdam           | [Breaking the Monolith: Decomposing and Governing Giant LLM Jobs Across Clusters](https://youtu.be/tCeWbdekqJE?si=dR7zb5u5a_AWOlx8)                            | Kevin Wang                                                  |
 | KubeCon EU 2026 Amsterdam           | [Zero-Downtime Migration from ingress-nginx to Istio in a Multi-Cluster Kubernetes Platform at Bloomberg](https://youtu.be/wix_PfQ61jY?si=_QVesF2sJ-F9vBRH)    | Joe Nathan Abellard                                         |
+| KubeCon NA 2026 Salt Lake City      | [Multi-Cluster Orchestration System: Karmada Updates and Use Cases - Project Lightning Talk](https://www.youtube.com/watch?v=3poWDBkwCNs)                       | Michas Szacillo                                             |
+| KubeCon NA 2026 Salt Lake City      | [Multi-Cluster Orchestration System: Karmada Updates and Use Cases](https://www.youtube.com/watch?v=ipBBiCJ0vd4)                                                | Joe Nathan Abellard, Hongcai Ren(missed)                            |
 
 
 ## Chinese Talks
@@ -44,3 +46,7 @@
 | KubeCon China(Hong Kong 2024) | [Leveraging Multi-Cluster Architecture for Resilient and Elastic Hybrid Cloud at Xiaohongshu](https://www.youtube.com/watch?v=05M7bqj2VJE)             | Feng Xiong                                      |
 | KCD China(Hangzhou 2025)      | [多模板遇上多集群：基于 Karmada 的AI大数据应用的资源治理与智能调度](https://www.bilibili.com/video/BV1jrUYB5E2k/)                                                                 | [Zhuang Zhang](https://github.com/zhzhuang-zju) |
 | KubeCon China(Hong Kong 2025) | [Keynote: Optimizing AI Workload Scheduling: Bilibili's Journey To an Efficient Cloud Native AI Platform](https://www.youtube.com/watch?v=akdwHaV_R5o) | Long Xu, Kevin Wang                             |
+| KubeCon China(Shanghai 2026)  | [Project Lightning Talk: Multi-cluster Orchestration System: Karmada Updates and Use Cases](https://www.youtube.com/watch?v=iH420G8zjQ4)               | Hongcai Ren, Yiheng Ci                          |
+| KubeCon China(Shanghai 2026)  | [Building a Multi-Cluster Progressive Delivery Platform with Karmada & Argo - Lightning Talk](https://www.youtube.com/watch?v=BLx13pNANHI)             | [Zhuang Zhang](https://github.com/zhzhuang-zju) |
+| KubeCon China(Shanghai 2026)  | [Keynote: Serving Qwen at Scale: Multi-Cluster AI Infrastructure on Karmada](https://www.youtube.com/watch?v=bRiX0Wx2O2g)                              | Jionghang Cai                                   |
+| KubeCon China(Shanghai 2026)  | [Multi-cluster Orchestration System: Karmada Updates and Use Cases](https://www.youtube.com/watch?v=OTi5DGIIfZg)                                       | Hongcai Ren, Zongqing Li                        |
