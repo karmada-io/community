@@ -47,9 +47,9 @@ Karmada versions are expressed as x.y.z, where x is the major version, y is the 
 
 The Karmada project maintains release branches for the most recent three minor releases. Applicable fixes, including security fixes, may be backported to those three release branches, depending on severity and feasibility.
 
-Our typical patch release cadence is every 3 months. Critical bug fixes may cause a more immediate release outside of the normal cadence. We also aim to not make releases during major holiday periods.
+Our typical patch release cadence is every month. Critical bug fixes may cause a more immediate release outside of the normal cadence. We also aim to not make releases during major holiday periods.
 
-See the [Karmada releases page](https://github.com/karmada-io/karmada/releases) for information on supported versions of Karmada.
+See the [Karmada releases page](https://karmada.io/docs/releases/) for information on supported versions of Karmada.
 
 ## Dependencies policy
 
